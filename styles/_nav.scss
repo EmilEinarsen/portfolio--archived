@@ -1,0 +1,13 @@
+.nav {
+	display: inline-block;
+}
+
+.nav__list {
+	display: inline-flex;
+	justify-content: flex-end;
+	gap: var(--chakra-space-6);
+}
+
+/* .nav__list-item {
+
+} */
