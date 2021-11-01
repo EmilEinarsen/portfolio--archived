@@ -5,13 +5,10 @@ import { ContactSection } from 'components/app/ContactSection'
 
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  return (
-    <>
-			<AboutSection />
-			<ContactSection />
-		</>
-  )
-}
+const Home: NextPage = () => 
+	<>
+		<AboutSection />
+		<ContactSection />
+	</>
 
 export default Home

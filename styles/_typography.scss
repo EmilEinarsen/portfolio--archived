@@ -1,0 +1,118 @@
+$quote-border-width: 3px;
+$quote-border-width-sm: 2px;
+$quote-icon-size: 1.5rem;
+$quote-icon-size-sm: 1rem;
+    
+// Blockquote CSS
+blockquote.quote {
+  border-left: $quote-border-width solid $highlight-color;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 2.5rem;
+  margin: 1.5rem -4.25rem;
+  padding: 1rem 2.5rem;
+  position: relative;
+  transition: .2s border ease-in-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -$quote-border-width;
+    height: $quote-icon-size * 2;
+    width: $quote-border-width;
+    margin-top: -$quote-icon-size;
+		background-color: $white;
+	}
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc((((-#{$quote-icon-size}) / 2) - 2px));
+    background-color: $highlight-color;
+    margin-top: calc(-#{$quote-icon-size} / 2);
+    transition: .2s all ease-in-out, .4s transform ease-in-out;
+		width: $quote-icon-size;
+		height: $quote-icon-size;
+		mask-image: url('../public/quote.svg');
+    mask-position: calc(50%) calc(50% - 1px);
+    mask-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&.quote--right {
+		text-align: right;
+
+		// No reason of applying these overwrites in mobile view
+		@media (min-width: 900px) {
+			border-left: unset; 
+			border-right: $quote-border-width solid $highlight-color;
+			&:before {
+				left: unset;
+				right: -$quote-border-width;
+			}
+			&:after {
+				left: unset;
+				right: calc(((-#{$quote-icon-size}) / 2)  - 2px);
+			}
+		}
+	}
+
+  &.quote--format:before, &.quote--format:after {
+    display: none;
+	}
+
+	&.quote--favorite:after {
+		mask-image: url('../public/star.svg');
+	}
+	
+	&.quote--thinking:after {
+		mask: unset;
+		background: url('../public/thinking-emoji.svg') no-repeat center;
+	}
+	
+  &:active:after {
+    transform: rotateY(360deg);
+  }
+	
+  cite {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-top: 1rem;
+	}
+	
+	@media (max-width: 900px) {
+		border-top: $quote-border-width-sm solid $highlight-color;
+		border-bottom: $quote-border-width-sm solid $highlight-color;
+		border-left: none;
+		margin: 2rem 0;
+		padding: 2rem 1.25rem;
+	
+		&:before {
+			left: 50%;
+			top: 0;
+			height: $quote-border-width-sm;
+			margin-top: -$quote-border-width-sm;
+			margin-left: -$quote-icon-size-sm;
+			width: $quote-icon-size-sm * 2;
+		}
+	
+		&:after {
+			width: $quote-icon-size-sm;
+			height: $quote-icon-size-sm;
+			left: 50%;
+			top: 0;
+			margin-top: calc((-#{$quote-icon-size-sm} - #{$quote-border-width-sm}) / 2);
+			margin-left: calc(-#{$quote-icon-size-sm} / 2);
+		}
+	
+		cite {
+			text-align: right;
+		}
+	}
+}

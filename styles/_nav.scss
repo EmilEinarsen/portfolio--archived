@@ -1,11 +1,16 @@
 .nav {
 	display: inline-block;
+	
+	a[aria-current] {
+		color: $highlight-color;
+		fill: $highlight-color;
+	}
 }
 
 .nav__list {
 	display: inline-flex;
 	justify-content: flex-end;
-	gap: var(--chakra-space-6);
+	gap: var(--space-6);
 }
 
 /* .nav__list-item {

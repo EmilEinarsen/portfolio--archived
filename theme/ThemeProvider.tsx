@@ -1,26 +1,29 @@
 import { DeepPartial, extendTheme, ChakraTheme, ChakraProvider, CSSReset } from "@chakra-ui/react"
 
 const theme = extendTheme({
+	config: {
+    cssVarPrefix: "",
+  },
 	components: {
 		Heading: {
 			variants: {
 				h1: {
-					fontSize: '6xl', fontWeight: 'bold'
+					fontSize: '6xl', fontWeight: 'medium', marginY: '1.5rem', letterSpacing: -1.5
 				},
 				h2: {
-					fontSize: '4xl', fontWeight: 'bold', marginTop: '3rem', marginBottom: '1.5rem'
+					fontSize: '5xl', fontWeight: 'medium', marginY: '1rem', letterSpacing: -.5
 				},
 				h3: {
-					fontSize: '3xl', fontWeight: 'bold'
+					fontSize: '4xl', fontWeight: 'medium', marginY: '.5rem'
 				},
 				h4: {
-					fontSize: '2xl', fontWeight: 'bold'
+					fontSize: '3xl', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .25
 				},
 				h5: {
-					fontSize: 'xl', fontWeight: 'bold'
+					fontSize: '2xl', fontWeight: 'medium', marginY: '.25rem'
 				},
 				h6: {
-					fontSize: 'xl', fontWeight: 'medium'
+					fontSize: 'xl', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .15
 				},
 			}
 		},
@@ -34,12 +37,19 @@ const theme = extendTheme({
 				},
 				caption: {
 					fontsize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem'
-				}
+				},
 			},
 			defaultProps: {
 				variant: "body"
 			}
-		}
+		},
+		Divider: {
+			sizes: {
+				thick: {
+					borderBottomWidth: '.25rem'
+				}
+			}
+		},
 	},
 } as DeepPartial<ChakraTheme>)
 

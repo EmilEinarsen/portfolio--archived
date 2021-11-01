@@ -1,12 +1,12 @@
 import { Heading, Spacer, VStack, Text } from "@chakra-ui/layout"
 
-import { Logo } from 'components/app/Logo'
+import { LogoIcon } from 'components/icons'
 
 export const HeroSection = () =>
-	<VStack as="section" className="hero-section" py="5rem">
-		<Logo fontSize="5xl" />
+	<VStack as="section" className="hero-section" pb="5rem">
+		<LogoIcon fontSize="6xl" />
 		<Spacer />
-		<Heading variant="h1" as="h1" whiteSpace="break-spaces" textAlign="center">{`Emil\nEinarsen`}</Heading>
+		<Heading variant="h1" as="h1" whiteSpace="break-spaces" textAlign="center">Emil{'\n'}Einarsen</Heading>
 		<Spacer />
-		<Text variant="caption">front-end developer</Text>
+		<Text variant="caption">web-developer</Text>
 	</VStack>

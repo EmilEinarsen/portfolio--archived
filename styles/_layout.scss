@@ -1,6 +1,6 @@
 $header-height: 120px;
 $footer-height: 120px;
-$page-content-gap: 2rem;
+$page-content-gap: 5rem;
 
 .wrapper {
 	min-width: 320px;
@@ -16,7 +16,7 @@ $page-content-gap: 2rem;
 
 .header__container, .main__container, .footer__container {
 	position: relative;
-	max-width: var(--chakra-sizes-container-md);
+	max-width: var(--sizes-container-md);
 	margin: 0 auto;
 	padding: 0 30px;
 }
@@ -42,7 +42,7 @@ $page-content-gap: 2rem;
 	margin-top: $page-content-gap;
 	padding-top: 15px;
 	padding-bottom: 25px;
-	height: $footer-height;
+	max-height: $footer-height;
 }
 
 .header__container, .main-navigation {
@@ -57,9 +57,9 @@ $page-content-gap: 2rem;
 }
 
 .header__container {
-	border-bottom: 2px solid $gray-300;
+	border-bottom: 2px solid $gray-100;
 }
 
 .footer__container {
-	border-bottom: 2px solid $gray-300;
+	border-bottom: 2px solid $gray-100;
 }

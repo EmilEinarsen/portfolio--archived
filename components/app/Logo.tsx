@@ -1,5 +1,4 @@
 import { Icon, IconProps } from '@chakra-ui/react'
-import React from 'react'
 
 // FIXME: Since migrated to Rust compiler, current solution for the standard CRA way of importing svgs as components doesn't work
 // Waiting for an updated documentation
