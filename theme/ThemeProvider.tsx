@@ -36,7 +36,7 @@ const theme = extendTheme({
 					fontSize: 'xl', fontWeight: 'regular', marginBottom: '1.5rem'
 				},
 				caption: {
-					fontsize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem'
+					fontsize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem', marginBottom: '1rem'
 				},
 			},
 			defaultProps: {
