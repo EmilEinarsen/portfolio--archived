@@ -8,7 +8,16 @@ export const AboutSection = () =>
 
 		<Heading variant="h1" as="h1" mb="5rem" whiteSpace="pre-wrap">Self-driven {'\n'}<Box as="span" whiteSpace="nowrap">Web-developer.</Box></Heading>
 		<Text>
-			<span className={styles.profile}><Image src="/emil-einarsen.jfif" width={128} height={128} alt="Emil Einarsen" title="Emil Einarsen" priority /></span>
+			<span className={styles.profile}>
+				<Image 
+					src="/emil-einarsen.jfif" 
+					width={128} 
+					height={128} 
+					alt="Emil Einarsen" 
+					title="Emil Einarsen" 
+					priority 
+				/>
+			</span>
 			Since turning my passion into a career, I have been working full-time as a Consultant Front-end Developer at Sigma Technology Systems and running a web-consulting side business outside of work. 
 		</Text>
 		<Text>
