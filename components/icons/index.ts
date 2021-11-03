@@ -16,22 +16,22 @@ import { SvelteIcon, SvelteIconMeta } from './devicons/SvelteIcon'
 import { TypescriptIcon, TypescriptIconMeta } from './devicons/TypescriptIcon'
 import { LogoIcon } from './LogoIcon'
 export const Icon = {
-	BootstrapIcon,
-	ChakraUIIcon,
-	CSSIcon,
-	D3Icon,
-	GithubIcon,
-	GitIcon,
-	HTMLIcon,
-	JavascriptIcon,
-	LinkedinIcon,
-	MUIIcon,
-	NextjsIcon,
-	NodeIcon,
-	ReactIcon,
-	SassIcon,
-	SvelteIcon,
-	TypescriptIcon,
+	Bootstrap: BootstrapIcon,
+	ChakraUI: ChakraUIIcon,
+	CSS: CSSIcon,
+	D3: D3Icon,
+	Github: GithubIcon,
+	Git: GitIcon,
+	HTML: HTMLIcon,
+	Javascript: JavascriptIcon,
+	Linkedin: LinkedinIcon,
+	MUI: MUIIcon,
+	Nextjs: NextjsIcon,
+	Node: NodeIcon,
+	React: ReactIcon,
+	Sass: SassIcon,
+	Svelte: SvelteIcon,
+	Typescript: TypescriptIcon,
 }
 export {
 	BootstrapIcon,
@@ -52,7 +52,7 @@ export {
 	TypescriptIcon,
 	LogoIcon,
 }
-export const IconMeta = {
+export const Meta = {
 	Bootstrap: BootstrapIconMeta,
 	ChakraUI: ChakraUIIconMeta,
 	CSS: CSSIconMeta,

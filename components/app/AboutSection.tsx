@@ -63,7 +63,7 @@ export const AboutSection = () =>
 
 		<Heading variant="h2" as="h2">Technical skillset</Heading>
 		<Text>
-			My main expertise areas are front-end development, HTML, CSS, JS, and building small, medium websites and nichée web applications.
+			My main expertise areas are front-end development. I am experienced in building small to medium websites and nichée web applications.
 		</Text>
 		<Text>
 			I have a special love for Javascript and extensive knowledge of its application with web fundamentals and Frameworks.

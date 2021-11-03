@@ -1,10 +1,11 @@
-import { Box, Flex, Text } from '@chakra-ui/layout'
-import { Fade, VStack, Wrap, WrapItem } from '@chakra-ui/react'
+import { Box, Flex, HStack, Text } from '@chakra-ui/layout'
+import { Button, Fade, VStack, Wrap, WrapItem } from '@chakra-ui/react'
 
-import { CSSIcon, GitIcon, HTMLIcon, JavascriptIcon, NodeIcon, SassIcon, TypescriptIcon, D3Icon, SvelteIcon, NextjsIcon, ReactIcon, MUIIcon, ChakraUIIcon, BootstrapIcon } from 'components/icons'
+import { Icon, Meta } from 'components/icons'
 import { useHoverDirty } from 'hooks/useHover'
 import { ColorGradient } from 'components/app/ColorGradient'
 import React, { useRef } from 'react'
+import { Link } from 'components/core/Link'
 
 export const HomeSection = () => {
 	const ref = useRef<HTMLDivElement>(null)
@@ -13,15 +14,25 @@ export const HomeSection = () => {
 	return (
 		<Box as="section" className="home-section">
 			<Text>
-			I create successful, responsive websites that are fast, easy to use, and built with best practices.
-			I am interested in the entire web-based spectrum and obsessed about my craft.
+				I am a web developer from Sweden who create successful, responsive websites that are fast, easy to use, and built with best practices. I am interested in the entire web-based spectrum and obsessed with my craft.
 			</Text>
 			<Text>
-			My main expertise areas are front-end development. I am experienced in building small to medium websites and nichée web applications.
+				My primary expertise is in areas of the front-end. I have experience with building small to medium websites and nichée web applications.
 			</Text>
 			<Text>
-			I am constantly growing and always looking for new challenges.
+				I am constantly growing and always looking for new challenges. Get in touch!
 			</Text>
+			<HStack mt="5rem" justify="center">
+				<Button color="primary">
+					Get in touch!
+				</Button>
+				<Text>
+					or
+				</Text>
+				<Button>
+					Read more
+				</Button>
+			</HStack>
 			<VStack gridGap="2rem" mt="5rem" ref={ref}>
 				<Fade in={showColors}>
 					<VStack>
@@ -35,30 +46,30 @@ export const HomeSection = () => {
 				<VStack>
 					<Text variant="caption">Languages</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><HTMLIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><JavascriptIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><TypescriptIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><CSSIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><SassIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><NodeIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><GitIcon fontSize="4xl" /></WrapItem>
+						<WrapItem><Link href={Meta.HTML.url}><Icon.HTML color={showColors ? Meta.HTML.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Javascript.url}><Icon.Javascript color={showColors ? Meta.Javascript.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Typescript.url}><Icon.Typescript color={showColors ? Meta.Typescript.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.CSS.url}><Icon.CSS color={showColors ? Meta.CSS.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Sass.url}><Icon.Sass color={showColors ? Meta.Sass.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Node.url}><Icon.Node color={showColors ? Meta.Node.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Git.url}><Icon.Git color={showColors ? Meta.Git.color : undefined} fontSize="4xl" /></Link></WrapItem>
 					</Wrap>
 				</VStack>
 				<VStack>
 					<Text variant="caption">Frameworks</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><ReactIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><NextjsIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><SvelteIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><D3Icon fontSize="4xl" /></WrapItem>
+						<WrapItem><Link href={Meta.React.url}><Icon.React color={showColors ? Meta.React.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Nextjs.url}><Icon.Nextjs color={showColors ? Meta.Nextjs.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Svelte.url}><Icon.Svelte color={showColors ? Meta.Svelte.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.D3.url}><Icon.D3 color={showColors ? Meta.D3.color : undefined} fontSize="4xl" /></Link></WrapItem>
 					</Wrap>
 				</VStack>
 				<VStack>
 					<Text variant="caption">Ui-frameworks</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><MUIIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><ChakraUIIcon fontSize="4xl" /></WrapItem>
-						<WrapItem><BootstrapIcon fontSize="4xl" /></WrapItem>
+						<WrapItem><Link href={Meta.MUI.url}><Icon.MUI color={showColors ? Meta.MUI.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.ChakraUI.url}><Icon.ChakraUI color={showColors ? Meta.ChakraUI.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<WrapItem><Link href={Meta.Bootstrap.url}><Icon.Bootstrap color={showColors ? Meta.Bootstrap.color : undefined} fontSize="4xl" /></Link></WrapItem>
 					</Wrap>
 				</VStack>
 			</VStack>
