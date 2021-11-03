@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from 'react';
 
-export const useHoverDirty = (ref: RefObject<Element>, enabled: boolean = true) => {
+export const useHover = (ref: RefObject<Element>, enabled: boolean = true) => {
   const [value, setValue] = useState(false);
 
   useEffect(() => {
