@@ -7,6 +7,9 @@ import { ColorGradient } from 'components/app/ColorGradient'
 import React, { useRef } from 'react'
 import { Link } from 'components/core/Link'
 
+const Item = ({ name, showColors, Comp = Icon[name] }: { name: keyof typeof Meta, showColors: boolean, Comp?: (typeof Icon)[keyof typeof Icon] }) => 
+	<WrapItem><Link href={Meta[name].url}><Comp color={showColors ? Meta[name].color : undefined} fontSize="4xl" /></Link></WrapItem>
+
 export const HomeSection = () => {
 	const ref = useRef<HTMLDivElement>(null)
 	const showColors = useHoverDirty(ref)
@@ -46,30 +49,30 @@ export const HomeSection = () => {
 				<VStack>
 					<Text variant="caption">Languages</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><Link href={Meta.HTML.url}><Icon.HTML color={showColors ? Meta.HTML.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Javascript.url}><Icon.Javascript color={showColors ? Meta.Javascript.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Typescript.url}><Icon.Typescript color={showColors ? Meta.Typescript.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.CSS.url}><Icon.CSS color={showColors ? Meta.CSS.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Sass.url}><Icon.Sass color={showColors ? Meta.Sass.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Node.url}><Icon.Node color={showColors ? Meta.Node.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Git.url}><Icon.Git color={showColors ? Meta.Git.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<Item name="HTML" {...{showColors}} />
+						<Item name="Javascript" {...{showColors}} />
+						<Item name="Typescript" {...{showColors}} />
+						<Item name="CSS" {...{showColors}} />
+						<Item name="Sass" {...{showColors}} />
+						<Item name="Node" {...{showColors}} />
+						<Item name="Git" {...{showColors}} />
 					</Wrap>
 				</VStack>
 				<VStack>
 					<Text variant="caption">Frameworks</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><Link href={Meta.React.url}><Icon.React color={showColors ? Meta.React.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Nextjs.url}><Icon.Nextjs color={showColors ? Meta.Nextjs.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Svelte.url}><Icon.Svelte color={showColors ? Meta.Svelte.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.D3.url}><Icon.D3 color={showColors ? Meta.D3.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<Item name="React" {...{showColors}} />
+						<Item name="Nextjs" {...{showColors}} />
+						<Item name="Svelte" {...{showColors}} />
+						<Item name="D3" {...{showColors}} />
 					</Wrap>
 				</VStack>
 				<VStack>
 					<Text variant="caption">Ui-frameworks</Text>
 					<Wrap justify="center" spacing="1.5rem">
-						<WrapItem><Link href={Meta.MUI.url}><Icon.MUI color={showColors ? Meta.MUI.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.ChakraUI.url}><Icon.ChakraUI color={showColors ? Meta.ChakraUI.color : undefined} fontSize="4xl" /></Link></WrapItem>
-						<WrapItem><Link href={Meta.Bootstrap.url}><Icon.Bootstrap color={showColors ? Meta.Bootstrap.color : undefined} fontSize="4xl" /></Link></WrapItem>
+						<Item name="MUI" {...{showColors}} />
+						<Item name="ChakraUI" {...{showColors}} />
+						<Item name="Bootstrap" {...{showColors}} />
 					</Wrap>
 				</VStack>
 			</VStack>
