@@ -1,4 +1,12 @@
 import { createIcon } from '../createIcon';
+import { createIconMeta } from '../createIconMeta';
+
+export const D3IconMeta = createIconMeta({
+	title: 'D3js',
+	desc: 'Cascading Style Sheets',
+	url: 'https://d3js.org/',
+	grade: 3,
+})
 
 export const D3Icon = createIcon({
   displayName: 'D3Icon',
@@ -17,6 +25,5 @@ export const D3Icon = createIcon({
 			</linearGradient>
 		</defs>,
 	],
-	title: 'D3js',
-	desc: 'Cascading Style Sheets',
+	...D3IconMeta,
 })

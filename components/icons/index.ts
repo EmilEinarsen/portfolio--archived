@@ -1,17 +1,90 @@
-export { BootstrapIcon } from './devicons/BootstrapIcon'
-export { ChakraUIIcon } from './devicons/ChakraUIIcon'
-export { CSSIcon } from './devicons/CSSIcon'
-export { D3Icon } from './devicons/D3Icon'
-export { GithubIcon } from './devicons/GithubIcon'
-export { GitIcon } from './devicons/GitIcon'
-export { HTMLIcon } from './devicons/HTMLIcon'
-export { JavascriptIcon } from './devicons/JavascriptIcon'
-export { LinkedinIcon } from './devicons/LinkedinIcon'
-export { LogoIcon } from './LogoIcon'
-export { MUIIcon } from './devicons/MUIIcon'
-export { NextjsIcon } from './devicons/NextjsIcon'
-export { NodeIcon } from './devicons/NodeIcon'
-export { ReactIcon } from './devicons/ReactIcon'
-export { SassIcon } from './devicons/SassIcon'
-export { SvelteIcon } from './devicons/SvelteIcon'
-export { TypescriptIcon } from './devicons/TypescriptIcon'
+import { BootstrapIcon, BootstrapIconMeta } from './devicons/BootstrapIcon'
+import { ChakraUIIcon, ChakraUIIconMeta } from './devicons/ChakraUIIcon'
+import { CSSIcon, CSSIconMeta } from './devicons/CSSIcon'
+import { D3Icon, D3IconMeta } from './devicons/D3Icon'
+import { GithubIcon, GithubIconMeta } from './devicons/GithubIcon'
+import { GitIcon, GitIconMeta } from './devicons/GitIcon'
+import { HTMLIcon, HTMLIconMeta } from './devicons/HTMLIcon'
+import { JavascriptIcon, JavascriptIconMeta } from './devicons/JavascriptIcon'
+import { LinkedinIcon, LinkedinIconMeta } from './devicons/LinkedinIcon'
+import { MUIIcon, MUIIconMeta } from './devicons/MUIIcon'
+import { NextjsIcon, NextjsIconMeta } from './devicons/NextjsIcon'
+import { NodeIcon, NodeIconMeta } from './devicons/NodeIcon'
+import { ReactIcon, ReactIconMeta } from './devicons/ReactIcon'
+import { SassIcon, SassIconMeta } from './devicons/SassIcon'
+import { SvelteIcon, SvelteIconMeta } from './devicons/SvelteIcon'
+import { TypescriptIcon, TypescriptIconMeta } from './devicons/TypescriptIcon'
+import { LogoIcon } from './LogoIcon'
+export const Icon = {
+	BootstrapIcon,
+	ChakraUIIcon,
+	CSSIcon,
+	D3Icon,
+	GithubIcon,
+	GitIcon,
+	HTMLIcon,
+	JavascriptIcon,
+	LinkedinIcon,
+	MUIIcon,
+	NextjsIcon,
+	NodeIcon,
+	ReactIcon,
+	SassIcon,
+	SvelteIcon,
+	TypescriptIcon,
+}
+export {
+	BootstrapIcon,
+	ChakraUIIcon,
+	CSSIcon,
+	D3Icon,
+	GithubIcon,
+	GitIcon,
+	HTMLIcon,
+	JavascriptIcon,
+	LinkedinIcon,
+	MUIIcon,
+	NextjsIcon,
+	NodeIcon,
+	ReactIcon,
+	SassIcon,
+	SvelteIcon,
+	TypescriptIcon,
+	LogoIcon,
+}
+export const IconMeta = {
+	Bootstrap: BootstrapIconMeta,
+	ChakraUI: ChakraUIIconMeta,
+	CSS: CSSIconMeta,
+	D3: D3IconMeta,
+	Github: GithubIconMeta,
+	Git: GitIconMeta,
+	HTML: HTMLIconMeta,
+	Javascript: JavascriptIconMeta,
+	Linkedin: LinkedinIconMeta,
+	MUI: MUIIconMeta,
+	Nextjs: NextjsIconMeta,
+	Node: NodeIconMeta,
+	React: ReactIconMeta,
+	Sass: SassIconMeta,
+	Svelte: SvelteIconMeta,
+	Typescript: TypescriptIconMeta,
+}
+export {
+	BootstrapIconMeta,
+	ChakraUIIconMeta,
+	CSSIconMeta,
+	D3IconMeta,
+	GithubIconMeta,
+	GitIconMeta,
+	HTMLIconMeta,
+	JavascriptIconMeta,
+	LinkedinIconMeta,
+	MUIIconMeta,
+	NextjsIconMeta,
+	NodeIconMeta,
+	ReactIconMeta,
+	SassIconMeta,
+	SvelteIconMeta,
+	TypescriptIconMeta,
+}

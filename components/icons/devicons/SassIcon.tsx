@@ -1,4 +1,12 @@
 import { createIcon } from '../createIcon';
+import { createIconMeta } from '../createIconMeta';
+
+export const SassIconMeta = createIconMeta({
+	title: 'Sass',
+	desc: 'Syntactically Awesome Style Sheets',
+	url: 'https://sass-lang.com/',
+	grade: 4,
+})
 
 export const SassIcon = createIcon({
   displayName: "SassIcon",
@@ -8,6 +16,5 @@ export const SassIcon = createIcon({
 		fillRule: 'evenodd',
 		clipRule: 'evenodd'
 	},
-	title: 'Sass',
-	desc: 'Syntactically Awesome Style Sheets',
+	...SassIconMeta,
 })

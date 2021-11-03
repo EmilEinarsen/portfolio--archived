@@ -1,4 +1,12 @@
 import { createIcon } from '../createIcon';
+import { createIconMeta } from '../createIconMeta';
+
+export const GithubIconMeta = createIconMeta({
+	title: 'Github',
+	desc: 'GitHub is a web-based interface that uses Git which a version control software',
+	url: 'https://github.com/',
+	grade: 3,
+})
 
 export const GithubIcon = createIcon({
   displayName: "GithubIcon",
@@ -11,6 +19,5 @@ export const GithubIcon = createIcon({
 		fillRule: 'evenodd',
 		clipRule: 'evenodd'
 	},
-	title: 'Github',
-	desc: 'GitHub is a web-based interface that uses Git which a version control software',
+	...GithubIconMeta,
 })

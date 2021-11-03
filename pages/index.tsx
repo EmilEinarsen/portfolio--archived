@@ -1,10 +1,9 @@
-import React from 'react'
+import type { NextPage } from 'next'
 
 import { HeroSection } from 'components/app/HeroSection'
 import { HomeSection } from 'components/app/HomeSection'
 import { ContactSection } from 'components/app/ContactSection'
 
-import type { NextPage } from 'next'
 
 const Home: NextPage = () =>
 	<>

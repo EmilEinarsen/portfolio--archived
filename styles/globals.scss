@@ -7,3 +7,7 @@ html {
 	overflow-y: auto;
 	overflow-y: overlay;
 }
+
+svg {
+	transition: color .3s;
+}

@@ -1,4 +1,12 @@
 import { createIcon } from '../createIcon';
+import { createIconMeta } from '../createIconMeta';
+
+export const ChakraUIIconMeta = createIconMeta({
+	title: 'Chakra UI',
+	desc: 'Chakra UI is a component-based library for React',
+	url: 'https://chakra-ui.com/',
+	grade: 3,
+})
 
 export const ChakraUIIcon = createIcon({
   displayName: 'ChakraUIIcon',
@@ -13,6 +21,5 @@ export const ChakraUIIcon = createIcon({
 			</linearGradient>
 		</defs>, */
 	],
-	title: 'Chakra UI',
-	desc: 'Chakra UI is a component-based library for React',
+	...ChakraUIIconMeta
 })

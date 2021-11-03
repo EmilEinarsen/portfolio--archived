@@ -7,7 +7,7 @@ export const useEventHandlers = (
   condition = true
 ) => {
   const events = useMemo(() => Object.entries(eventMap), [eventMap]);
-
+	
   useEffect(() => {
     if (!target || !condition) return;
     events.forEach(([type, callback]) =>
