@@ -19,7 +19,7 @@ const Layout: React.FC = ({ children }) =>
 			</main>
 			<footer className="footer">
 				<div className="footer__container">
-
+					
 				</div>
 			</footer>
 		</div>

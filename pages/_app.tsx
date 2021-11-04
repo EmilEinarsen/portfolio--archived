@@ -3,15 +3,15 @@ import type { AppProps } from 'next/app'
 import Layout from 'layout/Layout'
 import { useMount } from 'hooks/useMount'
 import { ThemeProvider } from 'theme/ThemeProvider'
-import { setCSSVariableVh } from 'utils/utils'
 
 import 'styles/globals.scss'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-
 	useMount(() => {
-		window.addEventListener('resize', setCSSVariableVh)
-		return () => window.removeEventListener('resize', setCSSVariableVh)
+		if(!window) return
+		document.documentElement.style.setProperty('--vh', (window.innerHeight / 100)+'px')
+		console.log('Hello world')
+		console.log(`Here's the source code friend!\nhttps://github.com/EmilEinarsen/portfolios\n\nHope you find what you're looking for 🔍`)
 	})
 
   return (
@@ -19,7 +19,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>
-		</ThemeProvider>		
+		</ThemeProvider>
 	)
 }
 

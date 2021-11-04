@@ -21,7 +21,7 @@ export const Nav = () =>
 	<>
 		<Link href="/" aria-label="Go to homepage" exact><LogoIcon fontSize="2xl" /></Link>
 		<Box as="nav" className="nav" aria-label="Main">
-			<List className="nav__list" role="menubar" orientation="horizontal"  alignItems="center">
+			<List className="nav__list" orientation="horizontal" alignItems="center">
 				<ListItem as={props => <Link {...props} href="/" exact>Home</Link>} />
 				<ListItem as={props => <Link {...props} href="/about" exact>About</Link>} />
 				<ListItem as={props => <ExternalLink {...props} href={github}><GithubIcon fontSize="2xl" /></ExternalLink>} />

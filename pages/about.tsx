@@ -1,15 +1,19 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 import Image from 'next/image'
 import React from 'react'
 import { Box, Heading, Divider, Text } from '@chakra-ui/react'
 
-import { ContactSection } from 'components/app/ContactSection'
-
 import styles from 'styles/modules/About.module.scss'
+import { KnowledgeSection } from 'components/app/KnowledgeSection'
 
 const Home: NextPage = () => 
 	<>
+		<Head>
+			<title>About Me · Emil Einarsen</title>
+			<meta property="og:title" content="About Me" />
+		</Head>
 		<Box as="section" className="about-section">
 
 			<Heading variant="h1" as="h1" mb="5rem" whiteSpace="pre-wrap">Self-driven {'\n'}<Box as="span" whiteSpace="nowrap">Web-developer.</Box></Heading>
@@ -82,8 +86,8 @@ const Home: NextPage = () =>
 				I also have experience in various programming languages, such as PHP, C/C++ and C#. 
 				Combined with complete fluency in Javascript and a passion for best practices, I can quickly pick up and become fluent in most languages and libraries.
 			</Text>
+			<KnowledgeSection showColors as="h3" />
 		</Box>
-		<ContactSection />
 	</>
 
 export default Home

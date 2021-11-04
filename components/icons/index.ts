@@ -1,3 +1,4 @@
+import { ArrowForwardIcon } from './ArrowForwardIcon'
 import { BootstrapIcon, BootstrapIconMeta } from './devicons/BootstrapIcon'
 import { ChakraUIIcon, ChakraUIIconMeta } from './devicons/ChakraUIIcon'
 import { CSSIcon, CSSIconMeta } from './devicons/CSSIcon'
@@ -32,6 +33,7 @@ export const Icon = {
 	Sass: SassIcon,
 	Svelte: SvelteIcon,
 	Typescript: TypescriptIcon,
+	ArrowForward: ArrowForwardIcon,
 }
 export {
 	BootstrapIcon,
@@ -51,6 +53,7 @@ export {
 	SvelteIcon,
 	TypescriptIcon,
 	LogoIcon,
+	ArrowForwardIcon,
 }
 export const Meta = {
 	Bootstrap: BootstrapIconMeta,

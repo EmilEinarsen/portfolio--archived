@@ -2,8 +2,7 @@
 	display: inline-block;
 	
 	a[aria-current] {
-		color: $highlight-color;
-		fill: $highlight-color;
+		text-decoration: underline;
 	}
 }
 
