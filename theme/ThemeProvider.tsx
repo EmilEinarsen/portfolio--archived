@@ -8,22 +8,22 @@ export const theme = extendTheme({
 		Heading: {
 			variants: {
 				h1: {
-					fontSize: '6xl', fontWeight: 'medium', marginY: '1.5rem', letterSpacing: -1.5
+					fontSize: '5xl', fontWeight: 'medium', marginY: '1.5rem', letterSpacing: -1.5
 				},
 				h2: {
-					fontSize: '5xl', fontWeight: 'medium', marginY: '1rem', letterSpacing: -.5
+					fontSize: '4xl', fontWeight: 'medium', marginY: '1rem', letterSpacing: -.5
 				},
 				h3: {
-					fontSize: '4xl', fontWeight: 'medium', marginY: '.5rem'
+					fontSize: '3xl', fontWeight: 'medium', marginY: '.5rem'
 				},
 				h4: {
-					fontSize: '3xl', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .25
+					fontSize: '2xl', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .25
 				},
 				h5: {
-					fontSize: '2xl', fontWeight: 'medium', marginY: '.25rem'
+					fontSize: 'xl', fontWeight: 'medium', marginY: '.25rem'
 				},
 				h6: {
-					fontSize: 'xl', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .15
+					fontSize: 'lg', fontWeight: 'medium', marginY: '.25rem', letterSpacing: .15
 				},
 			}
 		},
@@ -33,10 +33,10 @@ export const theme = extendTheme({
 					fontSize: 'xl', fontWeight: 'medium'
 				},
 				body: {
-					fontSize: 'xl', fontWeight: 'regular', marginBottom: '1.5rem'
+					fontSize: 'lg', fontWeight: 'normal', marginBottom: '1.5rem'
 				},
 				caption: {
-					fontsize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem', marginBottom: '1rem'
+					fontSize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem', marginBottom: '1rem'
 				},
 			},
 			defaultProps: {

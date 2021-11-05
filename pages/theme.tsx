@@ -49,6 +49,7 @@ const Theme: NextPage = () =>
 				<WrapItem><Icon.ArrowForward fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Hamburger fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Close fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.SwedishFlag fontSize="4xl" /></WrapItem>
 			</Wrap>
 		</VStack>
 	</VStack>

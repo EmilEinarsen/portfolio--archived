@@ -1,6 +1,7 @@
 $header-height: 120px;
 $footer-height: 120px;
 $page-content-gap: 5rem;
+$border-width: 2px;
 
 .wrapper {
 	min-width: 320px;
@@ -29,26 +30,25 @@ $page-content-gap: 5rem;
 }
 
 .main {
-	min-height: calc(70vh - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2);
-	min-height: calc(var(--vh, 1vh) * 70 - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2);
+	min-height: calc(100vh - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2 - #{$border-width}*2);
+	min-height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2  - #{$border-width}*2);
 	margin-top: $page-content-gap;
 }
 
 .footer {
-	width: 100%;
 	text-align: center;
 	margin-top: $page-content-gap;
-	padding-top: 15px;
-	padding-bottom: 25px;
 	max-height: $footer-height;
 }
 
 .header__container, .main-navigation {
-	height: inherit;
-	width: inherit;
+	width: 100%;
+	height: 100%;
 }
 
-.header__container .main-navigation {
+.header__container .main-navigation > div[data-focus-lock-disabled] {
+	width: 100%;
+	height: 100%;
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
@@ -56,9 +56,12 @@ $page-content-gap: 5rem;
 
 .header__container {
 	background: $white;
-	border-bottom: 2px solid $gray-100;
+	border-bottom: $border-width solid $gray-100;
 }
 
 .footer__container {
-	border-bottom: 2px solid $gray-100;
+	background: $white;
+	border-top: $border-width solid $gray-100;
+	padding-top: 1rem;
+	padding-bottom: 1.5rem;
 }

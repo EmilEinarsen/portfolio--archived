@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
 import Image from 'next/image'
-import { Box, Heading, Divider, Text } from '@chakra-ui/react'
+import { Box, Divider, useBreakpointValue } from '@chakra-ui/react'
+
+import { KnowledgeSection } from 'components/app/KnowledgeSection'
+import { Heading } from 'components/core/Heading'
+import { Text } from 'components/core/Text'
 
 import styles from 'styles/modules/About.module.scss'
-import { KnowledgeSection } from 'components/app/KnowledgeSection'
 
 const Home: NextPage = () => 
 	<>
@@ -14,8 +16,15 @@ const Home: NextPage = () =>
 			<meta property="og:title" content="About Me" />
 		</Head>
 		<Box as="section" className="about-section">
+			<Heading.H1
+				fontSize={useBreakpointValue({ base: '4xl', sm: '5xl', md: "6xl" }) ?? "6xl"}
+				mb="5rem" 
+				whiteSpace="pre-wrap"
+			>
+				Self-driven. {'\n'}
+				<Box as="span" whiteSpace="nowrap">Web-developer.</Box>
+			</Heading.H1>
 
-			<Heading variant="h1" as="h1" mb="5rem" whiteSpace="pre-wrap">Self-driven {'\n'}<Box as="span" whiteSpace="nowrap">Web-developer.</Box></Heading>
 			<Text>
 				<span className={styles.profile}>
 					<Image 
@@ -35,8 +44,8 @@ const Home: NextPage = () =>
 
 			<Divider size="thick" my="2rem" />
 
-			<Heading variant="h2" as="h2">Development</Heading>
-			<Heading variant="h3" as="h3">My approach</Heading>
+			<Heading.H2>Development</Heading.H2>
+			<Heading.H3>My approach</Heading.H3>
 			<Text>
 				As a “self-thought” developer, I owe a lot to the Open-source Community and do my best to find ways of giving back to it. 
 				Be it through open-source projects, sharing my acquired knowledge through online platforms or real-life mentorship. 
@@ -45,10 +54,10 @@ const Home: NextPage = () =>
 			<Text>
 				I believe and embrace my favourite software quote:
 			</Text>
-			<Text variant="blockquote" as="blockquote" className="quote quote--favorite">
+			<Text.Blockquote className="quote quote--favorite">
 				“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
 				<Text as="cite">~ Martin Fowler</Text>
-			</Text>
+			</Text.Blockquote>
 			<Text>
 				In my experience, code that does well also reads well. 
 				However, just because something reads well to me does not mean it reads well to others. Therefore, I approach development through trial and error and promote active feedback from my peers.
@@ -61,7 +70,7 @@ const Home: NextPage = () =>
 				Feedback helps me reexamine my current presuppositions and become a more well-rounded developer.
 			</Text>
 
-			<Heading variant="h3" as="h3">Informational Sources</Heading>
+			<Heading.H3>Informational Sources</Heading.H3>
 			<Text>
 				I spend much of my time reading up on web development and programming related topics and trends. 
 				I do this mainly through conversations with knowledgeable people in various fields/disciplines and following multiple web feeds through articles and videos.
@@ -70,7 +79,7 @@ const Home: NextPage = () =>
 				Additionally, recently I have found that reading well-received books is especially useful for topping off my main area of knowledge.
 			</Text>
 
-			<Heading variant="h2" as="h2">Technical skillset</Heading>
+			<Heading.H2>Technical skillset</Heading.H2>
 			<Text>
 				My main expertise areas are front-end development. I am experienced in building small to medium websites and nichée web applications.
 			</Text>

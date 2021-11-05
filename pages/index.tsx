@@ -1,14 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { withRouter } from 'next/router'
+import { WithRouterProps } from 'next/dist/client/with-router'
 
-import { Box, HStack, Text } from '@chakra-ui/layout'
+import { Box, HStack } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/react'
 
 import { HeroSection } from 'components/app/HeroSection'
 import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { ArrowForwardIcon } from 'components/icons/ArrowForwardIcon'
-import { WithRouterProps } from 'next/dist/client/with-router'
+import { Text } from 'components/core/Text'
 
 const Home: NextPage<WithRouterProps> = ({ router }) =>
 	<>

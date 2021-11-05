@@ -6,6 +6,7 @@ import { useMount } from 'hooks/useMount'
 import { ThemeProvider } from 'theme/ThemeProvider'
 
 import 'styles/globals.scss'
+import Head from 'next/head'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	useMount(() => {
@@ -17,6 +18,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
 		<>
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
 			<ThemeProvider>
 				<Layout>
 					<Component {...pageProps} />

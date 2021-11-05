@@ -6,7 +6,7 @@ export const HeroSection = () =>
 	<VStack as="section" className="hero-section" pb="5rem">
 		<LogoIcon fontSize="6xl" />
 		<Spacer />
-		<Heading variant="h1" as="h1" whiteSpace="break-spaces" textAlign="center">Emil{'\n'}Einarsen</Heading>
+		<Heading as="h1" fontSize="6xl" whiteSpace="break-spaces" textAlign="center">Emil{'\n'}Einarsen</Heading>
 		<Spacer />
 		<Text variant="caption">web-developer</Text>
 	</VStack>
