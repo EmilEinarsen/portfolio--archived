@@ -8,10 +8,29 @@
 
 .nav__list {
 	display: inline-flex;
-	justify-content: flex-end;
 	gap: var(--space-6);
 }
 
-/* .nav__list-item {
+.nav__list--mobile {
+	background: var(--colors-white);
+	position: absolute;
+	width: 100%;
+	top: calc(100% + 2px);
+	left: 0;
+	border-bottom: 2px solid $gray-100;
+	padding: 2rem 0 2rem 0;
 
-} */
+	li {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.nav__backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--colors-blackAlpha-600);
+}

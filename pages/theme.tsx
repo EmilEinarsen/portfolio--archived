@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import { Box, Heading, Text, VStack, Wrap, WrapItem } from '@chakra-ui/layout'
+import { Heading, Text, VStack, Wrap, WrapItem } from '@chakra-ui/layout'
 
-import { CSSIcon, HTMLIcon, SassIcon, NextjsIcon, JavascriptIcon, TypescriptIcon, ReactIcon, SvelteIcon, NodeIcon, MUIIcon, GithubIcon, D3Icon, GitIcon, LinkedinIcon, ChakraUIIcon, BootstrapIcon } from 'components/icons'
+import { Icon } from 'components/icons'
 
 const Theme: NextPage = () => 
 	<VStack gridGap="5rem">
@@ -21,35 +21,36 @@ const Theme: NextPage = () =>
 		<VStack gridGap="1rem">
 			<Text variant="caption">Languages:</Text>
 			<Wrap justify="center">
-				<WrapItem><CSSIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><GitIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><HTMLIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><JavascriptIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><NodeIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><SassIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><TypescriptIcon fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.CSS fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Git fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.HTML fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Javascript fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Node fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Sass fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Typescript fontSize="4xl" /></WrapItem>
 			</Wrap>
 			<Text variant="caption">Frameworks:</Text>
 			<Wrap justify="center">
-				<WrapItem><D3Icon fontSize="4xl" /></WrapItem>
-				<WrapItem><SvelteIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><NextjsIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><ReactIcon fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.D3 fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Svelte fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Nextjs fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.React fontSize="4xl" /></WrapItem>
 			</Wrap>
 			<Text variant="caption">Ui-frameworks:</Text>
 			<Wrap justify="center">
-				<WrapItem><MUIIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><ChakraUIIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><BootstrapIcon fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.MUI fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.ChakraUI fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Bootstrap fontSize="4xl" /></WrapItem>
 			</Wrap>
 			<Text variant="caption">Others:</Text>
 			<Wrap justify="center">
-				<WrapItem><GithubIcon fontSize="4xl" /></WrapItem>
-				<WrapItem><LinkedinIcon fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Github fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Linkedin fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.ArrowForward fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Hamburger fontSize="4xl" /></WrapItem>
+				<WrapItem><Icon.Close fontSize="4xl" /></WrapItem>
 			</Wrap>
-			
 		</VStack>
-			
 	</VStack>
 
 export default Theme

@@ -23,7 +23,7 @@ blockquote.quote {
     height: $quote-icon-size * 2;
     width: $quote-border-width;
     margin-top: -$quote-icon-size;
-		background-color: $white;
+		background: $white;
 	}
 
   &:after {
@@ -31,7 +31,7 @@ blockquote.quote {
     position: absolute;
     top: 50%;
     left: calc((((-#{$quote-icon-size}) / 2) - 2px));
-    background-color: $highlight-color;
+    background: $highlight-color;
     margin-top: calc(-#{$quote-icon-size} / 2);
     transition: .2s all ease-in-out, .4s transform ease-in-out;
 		width: $quote-icon-size;

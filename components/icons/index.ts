@@ -1,4 +1,5 @@
 import { ArrowForwardIcon } from './ArrowForwardIcon'
+import { CloseIcon } from './CloseIcon'
 import { BootstrapIcon, BootstrapIconMeta } from './devicons/BootstrapIcon'
 import { ChakraUIIcon, ChakraUIIconMeta } from './devicons/ChakraUIIcon'
 import { CSSIcon, CSSIconMeta } from './devicons/CSSIcon'
@@ -15,6 +16,7 @@ import { ReactIcon, ReactIconMeta } from './devicons/ReactIcon'
 import { SassIcon, SassIconMeta } from './devicons/SassIcon'
 import { SvelteIcon, SvelteIconMeta } from './devicons/SvelteIcon'
 import { TypescriptIcon, TypescriptIconMeta } from './devicons/TypescriptIcon'
+import { HamburgerIcon } from './HamburgerIcon'
 import { LogoIcon } from './LogoIcon'
 export const Icon = {
 	Bootstrap: BootstrapIcon,
@@ -34,6 +36,8 @@ export const Icon = {
 	Svelte: SvelteIcon,
 	Typescript: TypescriptIcon,
 	ArrowForward: ArrowForwardIcon,
+	Hamburger: HamburgerIcon,
+	Close: CloseIcon,
 }
 export {
 	BootstrapIcon,
@@ -54,6 +58,8 @@ export {
 	TypescriptIcon,
 	LogoIcon,
 	ArrowForwardIcon,
+	HamburgerIcon,
+	CloseIcon
 }
 export const Meta = {
 	Bootstrap: BootstrapIconMeta,

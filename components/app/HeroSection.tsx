@@ -1,4 +1,4 @@
-import { Heading, Spacer, VStack, Text } from "@chakra-ui/layout"
+import { Heading, Spacer, VStack, Text } from "@chakra-ui/react"
 
 import { LogoIcon } from 'components/icons'
 

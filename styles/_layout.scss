@@ -5,7 +5,6 @@ $page-content-gap: 5rem;
 .wrapper {
 	min-width: 320px;
 	min-height: 100%;
-	background-color: $white;
 }
 
 .page::before {
@@ -26,7 +25,6 @@ $page-content-gap: 5rem;
 	top: 0;
 	width: 100%;
 	height: $header-height;
-	background-color: $white;
 	z-index: 999;
 }
 
@@ -57,6 +55,7 @@ $page-content-gap: 5rem;
 }
 
 .header__container {
+	background: $white;
 	border-bottom: 2px solid $gray-100;
 }
 
