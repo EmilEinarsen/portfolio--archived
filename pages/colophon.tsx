@@ -18,7 +18,7 @@ const colophon = () =>
 		</Text>
 		
 		<List spacing=".5rem">
-			<Text mb={0}>Most notably amongst these tools are:</Text>
+			<Text.Naked>Most notably amongst these tools are:</Text.Naked>
 			<ListItem>
 				<ListIcon as={NextjsIcon} color="black" aria-hidden />
 				Next.js, for convince of React with the performance of SSG & SSR.

@@ -32,3 +32,10 @@ span.profile {
     border-radius: var(--radii-full);
 	}
 }
+
+h1.about__headline {
+	font-size: var(--fontSizes-6xl);
+	@media (max-width: 900px) {
+		font-size: var(--fontSizes-4xl);
+	}
+}

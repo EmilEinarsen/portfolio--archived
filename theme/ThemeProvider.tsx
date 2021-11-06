@@ -38,6 +38,12 @@ export const theme = extendTheme({
 				caption: {
 					fontSize: 'md', fontWeight: 'medium', textTransform: 'uppercase', color: 'gray.700', letterSpacing: '.1rem', marginBottom: '1rem'
 				},
+				blockquote: {
+					
+				},
+				naked: {
+					fontSize: 'lg', fontWeight: 'normal'
+				},
 			},
 			defaultProps: {
 				variant: "body"

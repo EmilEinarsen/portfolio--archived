@@ -1,8 +1,9 @@
-import { Box, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, HStack, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react'
 import { Link } from 'components/core/Link'
 import { SwedishFlagIcon } from 'components/icons'
 
 import { Nav } from "layout/Nav/Nav"
+import React from 'react'
 
 const Layout: React.FC = ({ children }) =>
 	<div className="wrapper">
@@ -25,17 +26,13 @@ const Layout: React.FC = ({ children }) =>
 					<SwedishFlagIcon mx=".5rem" fontSize="1rem" />
 				</Box>
 				<VStack className="footer__container">
-					<HStack justify="space-between" w="100%">
-						<HStack gridGap="1rem">
-							<Link href={process.env.NEXT_PUBLIC_SOURCE}>Source</Link>
-							<Link href="/colophon">Colophon</Link>
-						</HStack>
-						<HStack gridGap="1.5rem">
-							<Link href="/contact">Contact</Link>
-							<Link href={process.env.NEXT_PUBLIC_GITHUB}>Github</Link>
-							<Link href={process.env.NEXT_PUBLIC_LINKEDIN}>Linkedin</Link>
-						</HStack>
-					</HStack>
+					<Wrap justify="space-between" gridGap="1rem" w="100%">
+						<WrapItem><Link href={process.env.NEXT_PUBLIC_SOURCE}>Source</Link></WrapItem>
+						<WrapItem><Link href="/colophon">Colophon</Link></WrapItem>
+						<WrapItem><Link href="/contact">Contact</Link></WrapItem>
+						<WrapItem><Link href={process.env.NEXT_PUBLIC_GITHUB}>Github</Link></WrapItem>
+						<WrapItem><Link href={process.env.NEXT_PUBLIC_LINKEDIN}>Linkedin</Link></WrapItem>
+					</Wrap>
 				</VStack>
 			</footer>
 		</div>

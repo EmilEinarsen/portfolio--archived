@@ -61,7 +61,7 @@ const MobileMenu = () => {
 						>
 							<VStack
 								as={List}
-								display={{ base: 'unset', md: 'none' }}
+								d={{ base: 'unset', md: 'none' }}
 								className="nav__list nav__list--mobile"
 								ref={listRef}
 								id="mobileMenu"
@@ -74,7 +74,7 @@ const MobileMenu = () => {
 								{/* Needed since the portal breaks the outer Fade effect */}
 								<Fade in={isOpen}>
 									<Box
-										display={isOpen ? 'unset' : 'none'}
+										d={isOpen ? 'unset' : 'none'}
 										className="nav__backdrop"
 										onClick={onClose}
 									/>

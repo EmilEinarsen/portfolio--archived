@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Box, Divider, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Divider } from '@chakra-ui/react'
 
 import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { Heading } from 'components/core/Heading'
@@ -14,10 +14,11 @@ const Home: NextPage = () =>
 		<Head>
 			<title>About Me · Emil Einarsen</title>
 			<meta property="og:title" content="About Me" />
+			<link rel="preload" href="/emil-einarsen.jfif" as="image" />
 		</Head>
 		<Box as="section" className="about-section">
 			<Heading.H1
-				fontSize={useBreakpointValue({ base: '4xl', sm: '5xl', md: "6xl" }) ?? "6xl"}
+				className={styles.about__headline}
 				mb="5rem" 
 				whiteSpace="pre-wrap"
 			>
@@ -62,10 +63,10 @@ const Home: NextPage = () =>
 				In my experience, code that does well also reads well. 
 				However, just because something reads well to me does not mean it reads well to others. Therefore, I approach development through trial and error and promote active feedback from my peers.
 			</Text>
-			<Text variant="blockquote" as="blockquote" className="quote quote--right quote--thinking">
+			<Text.Blockquote className="quote quote--right quote--thinking">
 				The best part of the developmental process is the pull request review.
 				<Text as="cite">~ Unpopular opinion</Text>
-			</Text>
+			</Text.Blockquote>
 			<Text>
 				Feedback helps me reexamine my current presuppositions and become a more well-rounded developer.
 			</Text>

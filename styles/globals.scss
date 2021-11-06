@@ -6,6 +6,8 @@
 html {
 	overflow-y: auto;
 	overflow-y: overlay;
+	overflow-x: auto;
+	overflow-x: hidden;
 }
 
 html.noscroll {

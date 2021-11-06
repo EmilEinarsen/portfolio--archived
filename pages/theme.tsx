@@ -1,25 +1,29 @@
 import type { NextPage } from 'next'
-import { Heading, Text, VStack, Wrap, WrapItem } from '@chakra-ui/layout'
+import { VStack, Wrap, WrapItem } from '@chakra-ui/layout'
 
 import { Icon } from 'components/icons'
+import React from 'react'
+import { Heading } from 'components/core/Heading'
+import { Text } from 'components/core/Text'
 
 const Theme: NextPage = () => 
 	<VStack gridGap="5rem">
 		<VStack>
-			<Heading variant="h1">h1: Function called</Heading>
-			<Heading variant="h2">h2: Function called</Heading>
-			<Heading variant="h3">h3: Function called</Heading>
-			<Heading variant="h4">h4: Function called</Heading>
-			<Heading variant="h5">h5: Function called</Heading>
-			<Heading variant="h6">h6: Function called</Heading>
+			<Heading.H1>H1: Function called</Heading.H1>
+			<Heading.H2>H2: Function called</Heading.H2>
+			<Heading.H3>H3: Function called</Heading.H3>
+			<Heading.H4>H4: Function called</Heading.H4>
+			<Heading.H5>H5: Function called</Heading.H5>
+			<Heading.H6>H6: Function called</Heading.H6>
 		</VStack>
 		<VStack>
-			<Text variant="body" mb="0">body: Function called</Text>
-			<Text variant="subtitle">subtitle: Function called</Text>
-			<Text variant="caption">caption: Function called</Text>
+			<Text.Body>Body: Function called</Text.Body>
+			<Text.Naked>Naked: Function called</Text.Naked>
+			<Text.Subtitle>Subtitle: Function called</Text.Subtitle>
+			<Text.Caption>Caption: Function called</Text.Caption>
 		</VStack>
 		<VStack gridGap="1rem">
-			<Text variant="caption">Languages:</Text>
+			<Text.Caption>Languages:</Text.Caption>
 			<Wrap justify="center">
 				<WrapItem><Icon.CSS fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Git fontSize="4xl" /></WrapItem>
@@ -29,20 +33,20 @@ const Theme: NextPage = () =>
 				<WrapItem><Icon.Sass fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Typescript fontSize="4xl" /></WrapItem>
 			</Wrap>
-			<Text variant="caption">Frameworks:</Text>
+			<Text.Caption>Frameworks:</Text.Caption>
 			<Wrap justify="center">
 				<WrapItem><Icon.D3 fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Svelte fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Nextjs fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.React fontSize="4xl" /></WrapItem>
 			</Wrap>
-			<Text variant="caption">Ui-frameworks:</Text>
+			<Text.Caption>UI-frameworks:</Text.Caption>
 			<Wrap justify="center">
 				<WrapItem><Icon.MUI fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.ChakraUI fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Bootstrap fontSize="4xl" /></WrapItem>
 			</Wrap>
-			<Text variant="caption">Others:</Text>
+			<Text.Caption>Others:</Text.Caption>
 			<Wrap justify="center">
 				<WrapItem><Icon.Github fontSize="4xl" /></WrapItem>
 				<WrapItem><Icon.Linkedin fontSize="4xl" /></WrapItem>

@@ -12,5 +12,5 @@ const MobileMenu = dynamic(() => import('./MobileMenu'))
 export const Nav = () => {
 	const isMobile = useIsMobile()
 	
-	return !isMobile ? <Menu isMobile={isMobile} /> : <MobileMenu />
+	return !isMobile ? <Menu /> : <MobileMenu />
 }
