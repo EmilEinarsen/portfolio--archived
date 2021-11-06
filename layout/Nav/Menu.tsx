@@ -30,16 +30,16 @@ export const Menu = () =>
 		<Link href="/" aria-label="Go to homepage" exact><LogoIcon fontSize="2xl" /></Link>
 		<Box as="nav" className="nav" aria-label="Main">
 			<List className="nav__list" orientation="horizontal" alignItems="center">
-				<Item className="hide-on-fake-mobile" as={props => <Link {...props} href="/" exact>Home</Link>} />
-				<Item className="hide-on-fake-mobile" as={props => <Link {...props} href="/about" exact>About</Link>} />
-				<Item className="hide-on-fake-mobile" as={props => <Link {...props} href="/contact" exact>Contact</Link>} />
+				<Item className="d-not-mobile" as={props => <Link {...props} href="/" exact>Home</Link>} />
+				<Item className="d-not-mobile" as={props => <Link {...props} href="/about" exact>About</Link>} />
+				<Item className="d-not-mobile" as={props => <Link {...props} href="/contact" exact>Contact</Link>} />
 				<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></ExternalLink>} />
 				<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></ExternalLink>} />
 				<IconButton
 					size="lg"
 					aria-label="Open the menu"
 					aria-controls="mobileMenu"
-					className="show-on-fake-mobile"
+					className="d-only-mobile"
 				>
 					<HamburgerIcon aria-hidden />
 				</IconButton>

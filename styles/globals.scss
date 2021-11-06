@@ -26,3 +26,15 @@ body.dots {
 @-ms-viewport {
   width: device-width;
 }
+
+.d-not-mobile {
+	@media (max-width: 48em) {
+		display: none !important;
+	}
+}
+
+.d-only-mobile {
+	@media (min-width: 48em) {
+		display: none !important;
+	}
+}
