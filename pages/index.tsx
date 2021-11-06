@@ -31,7 +31,7 @@ const Home: NextPage<WithRouterProps> = ({ router }) =>
 				<Button 
 					variant="outline" 
 					size="lg"
-					disabled
+					onClick={() => router.push('/contact')}
 				>
 					Get in touch!
 				</Button>

@@ -11,19 +11,13 @@ import { CloseIcon, GithubIcon, HamburgerIcon, LinkedinIcon, LogoIcon } from 'co
 import { useMount } from 'hooks/useMount'
 import { useIsMobile } from 'hooks/useIsMobile'
 import { useDisableScroll } from 'hooks/useDisableScroll'
+import { Item } from './Menu'
 
-const ListItem: React.FC<HeadingProps & { isDrawer?: boolean }> = ({ isDrawer, ...props }) => 
-	<ChakraListItem
-		className="nav__list-item"
-	>
-		<Heading
-			{...props}
-			variant={isDrawer ? "h4" : "h6"}
-			{...isDrawer?{display:'flex', justifyContent: 'center'}:null}
-		/>
-	</ChakraListItem>
-
-export const Nav = () => {
+/**
+ * This components appearance should be synced with `Menu`, so that `Menu` can fake `MobileMenu`s 
+ * appearance before bing swapped dynamically in `Nav`
+ */
+const MobileMenu = () => {
 	const btnRef = useRef<HTMLButtonElement>(null)
 	const headerRef = useRef<HTMLElement | null>(null)
 
@@ -47,27 +41,18 @@ export const Nav = () => {
 				<Link href="/" aria-label="Go to homepage" exact onClick={onClose}><LogoIcon fontSize="2xl" /></Link>
 				<Box as="nav" className="nav" aria-label="Main">
 						<List className="nav__list" orientation="horizontal" alignItems="center">
-							{!isMobile &&
-								<>
-									<ListItem as={props => <Link {...props} href="/" exact>Home</Link>} />
-									<ListItem as={props => <Link {...props} href="/about" exact>About</Link>} />
-									<ListItem as={props => <Link {...props} href="/contact" exact>Contact</Link>} />
-								</>
-							}
-							<ListItem as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></ExternalLink>} />
-							<ListItem as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></ExternalLink>} />
-							{isMobile &&
-								<IconButton
-									size="lg"
-									ref={btnRef} 
-									onClick={onToggle}
-									aria-expanded={isOpen} 
-									aria-label={(isOpen ? "Close" : "Open") + ' the menu'}
-									aria-controls="mobileMenu"
-								>
-									{isOpen ? <CloseIcon aria-hidden /> : <HamburgerIcon aria-hidden />}
-								</IconButton>
-							}
+							<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></ExternalLink>} />
+							<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></ExternalLink>} />
+							<IconButton
+								size="lg"
+								ref={btnRef} 
+								onClick={onToggle}
+								aria-expanded={isOpen} 
+								aria-label={(isOpen ? "Close" : "Open") + ' the menu'}
+								aria-controls="mobileMenu"
+							>
+								{isOpen ? <CloseIcon aria-hidden /> : <HamburgerIcon aria-hidden />}
+							</IconButton>
 						</List>
 						<Fade 
 							in={isOpen}
@@ -81,9 +66,9 @@ export const Nav = () => {
 								ref={listRef}
 								id="mobileMenu"
 							>
-								<ListItem as={props => <Link {...props} href="/" exact>Home</Link>} isDrawer onClick={onClose} />
-								<ListItem as={props => <Link {...props} href="/about" exact>About</Link>} isDrawer onClick={onClose} />
-								<ListItem as={props => <Link {...props} href="/contact" exact>Contact</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/" exact>Home</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/about" exact>About</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/contact" exact>Contact</Link>} isDrawer onClick={onClose} />
 							</VStack>
 							<Portal containerRef={headerRef}>
 								{/* Needed since the portal breaks the outer Fade effect */}
@@ -101,3 +86,5 @@ export const Nav = () => {
 		</>
 	)
 }
+
+export default MobileMenu

@@ -11,21 +11,24 @@ const colophon = () =>
 			This page outlines technical details about this site.
 		</Text>
 		<Text>
-			It was built to be high performant while maintaining a great developer experience.
-			To achieve this goal I used several third party tools and services.
+			The goal was to build for high performance while maintaining a great developer experience.
 		</Text>
-		<Text>Most notably is:</Text>
-		<List>
+		<Text>
+			Several third-party tools and services were used.
+		</Text>
+		
+		<List spacing=".5rem">
+			<Text mb={0}>Most notably amongst these tools are:</Text>
 			<ListItem>
-				<ListIcon as={NextjsIcon} color="green.500" />
-				Nextjs, for the convince of React but with the performance of SSG & SSR
+				<ListIcon as={NextjsIcon} color="black" aria-hidden />
+				Next.js, for convince of React with the performance of SSG & SSR.
 			</ListItem>
 			<ListItem>
-				<ListIcon as={ChakraUIIcon} color="green.500" />
-				Chakra ui, for its developer experience and neutral yet modern appearance.
+				<ListIcon as={ChakraUIIcon} color="teal.300" aria-hidden />
+				Chakra UI, for its developer experience and neutral yet modern appearance.
 			</ListItem>
 			<ListItem>
-				<ListIcon as={TypescriptIcon} color="green.500" />
+				<ListIcon as={TypescriptIcon} color="blue.500" aria-hidden />
 				Typescript, for its type hints and development guidance.
 			</ListItem>
 		</List>
