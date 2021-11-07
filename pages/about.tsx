@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Box, Divider } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { Heading } from 'components/core/Heading'
@@ -16,7 +16,7 @@ const Home: NextPage = () =>
 			<meta property="og:title" content="About Me" />
 			<link rel="preload" href="/emil-einarsen.jfif" as="image" />
 		</Head>
-		<Box as="section" className="about-section">
+		<Box as="article" className="about">
 			<Heading.H1
 				className={styles.about__headline}
 				mb="5rem" 
@@ -43,14 +43,12 @@ const Home: NextPage = () =>
 				I like modern web technologies and take pride in quality code and the experience it provides.
 			</Text>
 
-			<Divider size="thick" my="2rem" />
-
 			<Heading.H2>Development</Heading.H2>
 			<Heading.H3>My approach</Heading.H3>
 			<Text>
-				As a “self-thought” developer, I owe a lot to the Open-source Community and do my best to find ways of giving back to it. 
+				As a self-driven developer, I owe a lot to the Open-source Community and do my best to find ways of giving back to it. 
 				Be it through open-source projects, sharing my acquired knowledge through online platforms or real-life mentorship. 
-				Consequently, I have accumulated principles that help me write resilient, self-reliant, reusable and ease-to-read code.
+				From this belief in sharing knowledge and accomplishments, I have accumulated principles that help me write resilient, reusable and ease-to-read code.
 			</Text>
 			<Text>
 				I believe and embrace my favourite software quote:

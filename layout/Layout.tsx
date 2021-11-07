@@ -1,8 +1,9 @@
-import { Box, HStack, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react'
-import { Link } from 'components/core/Link'
-import { SwedishFlagIcon } from 'components/icons'
+import { Box, Flex, VStack } from '@chakra-ui/react'
 
 import { Nav } from "layout/Nav/Nav"
+import { Link } from 'components/core/Link'
+import { SwedishFlagIcon } from 'components/icons'
+import { Text } from "components/core/Text"
 import React from 'react'
 
 const Layout: React.FC = ({ children }) =>
@@ -21,18 +22,19 @@ const Layout: React.FC = ({ children }) =>
 				</div>
 			</main>
 			<footer className="footer" id="footer">
-				<Box as="p" d="inline-flex" alignItems="center" my="1rem">
-					<Text variant="caption" fontSize=".75rem" mb={0} as="span">Proudly made in </Text>
-					<SwedishFlagIcon mx=".5rem" fontSize="1rem" />
+				<Box as="p" d="inline-flex" alignItems="end" my="1rem">
+					<Text.Caption fontSize=".75rem" as="span">Proudly made in</Text.Caption>
+					<Box as="span" fontSize={0}>🇸🇪</Box><SwedishFlagIcon mx=".5rem" fontSize="1rem" />
 				</Box>
 				<VStack className="footer__container">
-					<Wrap justify="space-between" gridGap="1rem" w="100%">
-						<WrapItem><Link href={process.env.NEXT_PUBLIC_SOURCE}>Source</Link></WrapItem>
-						<WrapItem><Link href="/colophon">Colophon</Link></WrapItem>
-						<WrapItem><Link href="/contact">Contact</Link></WrapItem>
-						<WrapItem><Link href={process.env.NEXT_PUBLIC_GITHUB}>Github</Link></WrapItem>
-						<WrapItem><Link href={process.env.NEXT_PUBLIC_LINKEDIN}>Linkedin</Link></WrapItem>
-					</Wrap>
+					<Flex justify="space-between" flexWrap="wrap" gridGap="1rem" w="100%">
+						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_SOURCE}>Source</Link></Box>
+						<Box flex="1"><Link href="/colophon">Colophon</Link></Box>
+						<Box flex="2" d={{ base: 'none', sm: 'unset' }} />
+						<Box flex="1"><Link href="/contact">Contact</Link></Box>
+						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_GITHUB}>Github</Link></Box>
+						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_LINKEDIN}>Linkedin</Link></Box>
+					</Flex>
 				</VStack>
 			</footer>
 		</div>

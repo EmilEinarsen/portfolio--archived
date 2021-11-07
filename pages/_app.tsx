@@ -1,12 +1,12 @@
 import type { AppProps } from 'next/app'
-import Script from 'next/script'
+import Head from 'next/head'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import Layout from 'layout/Layout'
 import { useMount } from 'hooks/useMount'
-import { ThemeProvider } from 'theme/ThemeProvider'
+import theme from 'theme'
 
 import 'styles/globals.scss'
-import Head from 'next/head'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	useMount(() => {
@@ -21,11 +21,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<ThemeProvider>
+			<ChakraProvider theme={theme}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>
-			</ThemeProvider>
+			</ChakraProvider>
 		</>
 	)
 }

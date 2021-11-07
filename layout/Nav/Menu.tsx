@@ -1,12 +1,11 @@
 import { Box, List, ListItem } from '@chakra-ui/layout'
 import { Heading, HeadingProps, IconButton } from '@chakra-ui/react'
-import { ExternalLink } from 'components/core/ExternalLink'
+
 import { Link } from 'components/core/Link'
 import { GithubIcon } from 'components/icons/devicons/GithubIcon'
 import { LinkedinIcon } from 'components/icons/devicons/LinkedinIcon'
 import { HamburgerIcon } from 'components/icons/HamburgerIcon'
 import { LogoIcon } from 'components/icons/LogoIcon'
-import React from 'react'
 
 export const Item: React.FC<HeadingProps & { isDrawer?: boolean }> = ({ isDrawer, ...props }) => 
 	<ListItem
@@ -31,10 +30,11 @@ export const Menu = () =>
 		<Box as="nav" className="nav" aria-label="Main">
 			<List className="nav__list" orientation="horizontal" alignItems="center">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/" exact>Home</Link>} />
+				<Item className="d-not-mobile" as={props => <Link {...props} href="/projects" exact>Projects</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/about" exact>About</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/contact" exact>Contact</Link>} />
-				<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></ExternalLink>} />
-				<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></ExternalLink>} />
+				<Item as={props => <Link  {...props} href={process.env.NEXT_PUBLIC_GITHUB} isExternal><GithubIcon fontSize="2xl" /></Link>} />
+				<Item as={props => <Link {...props} href={process.env.NEXT_PUBLIC_LINKEDIN} isExternal><LinkedinIcon fontSize="2xl" /></Link>} />
 				<IconButton
 					size="lg"
 					aria-label="Open the menu"

@@ -5,7 +5,6 @@ import { Box, Heading, List, ListItem as ChakraListItem, HeadingProps, VStack } 
 import FocusLock from '@chakra-ui/focus-lock'
 import { Fade, Portal } from '@chakra-ui/react'
 
-import { ExternalLink } from 'components/core/ExternalLink'
 import { Link } from 'components/core/Link'
 import { CloseIcon, GithubIcon, HamburgerIcon, LinkedinIcon, LogoIcon } from 'components/icons'
 import { useMount } from 'hooks/useMount'
@@ -41,8 +40,8 @@ const MobileMenu = () => {
 				<Link href="/" aria-label="Go to homepage" exact onClick={onClose}><LogoIcon fontSize="2xl" /></Link>
 				<Box as="nav" className="nav" aria-label="Main">
 						<List className="nav__list" orientation="horizontal" alignItems="center">
-							<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></ExternalLink>} />
-							<Item as={props => <ExternalLink {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></ExternalLink>} />
+							<Item as={props => <Link {...props} href={process.env.NEXT_PUBLIC_GITHUB}><GithubIcon fontSize="2xl" /></Link>} />
+							<Item as={props => <Link {...props} href={process.env.NEXT_PUBLIC_LINKEDIN}><LinkedinIcon fontSize="2xl" /></Link>} />
 							<IconButton
 								size="lg"
 								ref={btnRef} 
@@ -67,6 +66,7 @@ const MobileMenu = () => {
 								id="mobileMenu"
 							>
 								<Item as={props => <Link {...props} href="/" exact>Home</Link>} isDrawer onClick={onClose} />
+								<Item as={props => <Link {...props} href="/projects" exact>Projects</Link>} isDrawer onClick={onClose} />
 								<Item as={props => <Link {...props} href="/about" exact>About</Link>} isDrawer onClick={onClose} />
 								<Item as={props => <Link {...props} href="/contact" exact>Contact</Link>} isDrawer onClick={onClose} />
 							</VStack>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
-import { Link as StyledLink, LinkProps as StyledLinkProps } from '@chakra-ui/react';
+import { Link as StyledLink, LinkProps as StyledLinkProps, VisuallyHidden } from '@chakra-ui/react';
 
 export interface LinkProps extends Omit<StyledLinkProps, 'href'> {
 	href?: string
@@ -18,8 +18,12 @@ export const Link: React.FC<LinkProps> = ({
 	
 	return (
 		<NextLink href={href} passHref>
-			<StyledLink {...props} as="a" {...isActive?{'aria-current': 'page'}:null}>
-				{children}
+			<StyledLink 
+				{...props} 
+				{...isActive?{'aria-current': 'page'}:null} 
+				{...props.isExternal?{rel:'noopener noreferrer'}:null}
+			>
+				{children}{props.isExternal && <VisuallyHidden> (opens in a new tab)</VisuallyHidden>}
 			</StyledLink>
 		</NextLink>
 	);

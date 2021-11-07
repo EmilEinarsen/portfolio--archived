@@ -1,11 +1,11 @@
 import { Text as ChakraText, TextProps } from "@chakra-ui/layout"
 
 interface Compound {
-	Subtitle: React.ComponentType<Omit<TextProps, 'as' | 'variant'>>
-	Body: React.ComponentType<Omit<TextProps, 'as' | 'variant'>>
-	Caption: React.ComponentType<Omit<TextProps, 'as' | 'variant'>>
-	Blockquote: React.ComponentType<Omit<TextProps, 'as' | 'variant'>>
-	Naked: React.ComponentType<Omit<TextProps, 'as' | 'variant'>>
+	Subtitle: React.ComponentType<Omit<TextProps, 'variant'>>
+	Body: React.ComponentType<Omit<TextProps, 'variant'>>
+	Caption: React.ComponentType<Omit<TextProps, 'variant'>>
+	Blockquote: React.ComponentType<Omit<TextProps, 'variant'>>
+	Naked: React.ComponentType<Omit<TextProps, 'variant'>>
 }
 
 export const Text = Object.assign(ChakraText, {

@@ -19,6 +19,7 @@ import { TypescriptIcon, TypescriptIconMeta } from './devicons/TypescriptIcon'
 import { HamburgerIcon } from './HamburgerIcon'
 import { LogoIcon } from './LogoIcon'
 import { SwedishFlagIcon } from './flags/SwedishFlagIcon'
+import { ExternalLinkIcon } from './ExternalLinkIcon'
 export const Icon = {
 	Bootstrap: BootstrapIcon,
 	ChakraUI: ChakraUIIcon,
@@ -40,6 +41,7 @@ export const Icon = {
 	Hamburger: HamburgerIcon,
 	Close: CloseIcon,
 	SwedishFlag: SwedishFlagIcon,
+	ExternalLink: ExternalLinkIcon,
 }
 export {
 	BootstrapIcon,
@@ -63,6 +65,7 @@ export {
 	HamburgerIcon,
 	CloseIcon,
 	SwedishFlagIcon,
+	ExternalLinkIcon,
 }
 export const Meta = {
 	Bootstrap: BootstrapIconMeta,

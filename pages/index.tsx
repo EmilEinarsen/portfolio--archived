@@ -15,9 +15,10 @@ const Home: NextPage<WithRouterProps> = ({ router }) =>
 	<>
 		<Head>
 			<title>Emil Einarsen · Emil Einarsen</title>
+			<meta property="og:title" content="Emil Einarsen" />
 		</Head>
 		<HeroSection />
-		<Box as="section" className="home-section">
+		<Box className="home">
 			<Text>
 				I am a web developer from Sweden who create successful, responsive websites that are fast, easy to use, and built with best practices. I am interested in the entire web-based spectrum and obsessed with my craft.
 			</Text>

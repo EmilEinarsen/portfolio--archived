@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-sync-scripts */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import CSSReset from '@chakra-ui/css-reset'
 
 class MyDocument extends Document {
   render() {
@@ -17,6 +17,7 @@ class MyDocument extends Document {
 					<meta property="og:description" content="Emil Einarsen is a web developer and passionate web developer based in Halmstad, Sweden." />
 				</Head>
         <body className="dots">
+					<CSSReset />
           <Main />
           <NextScript />
         </body>

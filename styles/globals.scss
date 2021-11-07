@@ -38,3 +38,13 @@ body.dots {
 		display: none !important;
 	}
 }
+
+
+article ul[role=list] {
+	margin-left: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+article h2 {
+	border-bottom-width: 1px;
+}

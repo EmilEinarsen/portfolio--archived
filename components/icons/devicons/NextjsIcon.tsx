@@ -5,7 +5,7 @@ export const NextjsIconMeta = createIconMeta({
 	title: 'Nextjs',
 	desc: 'Next.js is a React framework, developed and maintained by Vercel',
 	url: 'https://nextjs.org/',
-	grade: 3,
+	grade: 4,
 })
 
 export const NextjsIcon = createIcon({

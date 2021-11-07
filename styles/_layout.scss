@@ -31,7 +31,7 @@ $border-width: 2px;
 
 .main {
 	min-height: calc(100vh - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2 - #{$border-width}*2);
-	min-height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2  - #{$border-width}*2);
+	min-height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$footer-height} - #{$page-content-gap}*2 - #{$border-width}*2);
 	margin-top: $page-content-gap;
 }
 
