@@ -13,7 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 		if(!window) return
 		document.documentElement.style.setProperty('--vh', (window.innerHeight / 100)+'px')
 		console.log('Hello world')
-		console.log(`Here's the source code friend!\nhttps://github.com/EmilEinarsen/portfolios\n\nHope you find what you're looking for 🔍`)
+		console.log(`Here's the source code friend!\n${process.env.NEXT_PUBLIC_SOURCE}\n\nHope you find what you're looking for 🔍`)
 	})
 
   return (
