@@ -9,7 +9,7 @@ import { HeroSection } from 'components/app/HeroSection'
 import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { ArrowForwardIcon } from 'components/icons/ArrowForwardIcon'
 import { Text } from 'components/core/Text'
-import { withMeta } from './withMeta'
+import { withMeta } from '../utils/withMeta'
 
 const Home = withMeta<WithRouterProps>({
 	title: 'Emil Einarsen · Emil Einarsen',
