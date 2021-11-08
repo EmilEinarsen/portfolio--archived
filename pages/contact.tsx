@@ -1,10 +1,13 @@
 
-const contact = () => {
-	return (
-		<div>
-			hej
-		</div>
-	)
+
+const meta = {
+	title: '',
+	description: '',
 }
+
+const contact: Page = () => 
+	<>
+		hej
+	</>
 
 export default contact

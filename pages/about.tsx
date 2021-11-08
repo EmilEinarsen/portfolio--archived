@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Box } from '@chakra-ui/react'
@@ -9,7 +8,12 @@ import { Text } from 'components/core/Text'
 
 import styles from 'styles/modules/About.module.scss'
 
-const Home: NextPage = () => 
+const meta = {
+	title: '',
+	description: ''
+}
+
+const Home: Page = () => 
 	<>
 		<Head>
 			<title>About Me · Emil Einarsen</title>

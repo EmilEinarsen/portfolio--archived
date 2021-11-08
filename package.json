@@ -8,9 +8,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "bart": "next build && next start",
-    "lint": "next lint",
-		"gen:theme-typings": "chakra-cli tokens <path/to/your/theme.(js|ts)>",
-		"postinstall": "npm run gen:theme-typings"
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",

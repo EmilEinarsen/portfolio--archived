@@ -1,13 +1,17 @@
-import { Box, Flex, List, ListIcon, ListItem, UnorderedList } from '@chakra-ui/layout'
+import { List, ListIcon, ListItem, } from '@chakra-ui/layout'
 import Head from 'next/head'
 
 import { Heading } from 'components/core/Heading'
 import { Text } from 'components/core/Text'
 import { ChakraUIIcon, ChakraUIIconMeta, NextjsIcon, NextjsIconMeta, TypescriptIcon, TypescriptIconMeta } from 'components/icons'
-import React from 'react'
 import { Link } from 'components/core/Link'
 
-const colophon = () =>
+const meta = {
+	title: '',
+	description: '',
+}
+
+const colophon: Page = () =>
 	<>
 		<Head>
 			<title>Colophon · Emil Einarsen</title>

@@ -1,5 +1,3 @@
-import { StyleConfig } from "theme/theme"
-
 const divider: StyleConfig = {
 	sizes: {
 		thick: {

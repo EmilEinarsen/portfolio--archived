@@ -3,7 +3,12 @@ import { UnorderedList, ListItem, Flex, Box } from '@chakra-ui/layout'
 
 import { Text } from 'components/core/Text'
 
-const portfolio = () =>
+const meta = {
+	title: '',
+	description: '',
+}
+
+const Portfolio: Page = () =>
 	<>
 		<Text>
 			The goal was to build for <b>high performance while maintaining a great developer experience.</b>. 
@@ -51,4 +56,4 @@ const portfolio = () =>
 		</Flex>
 	</>
 
-export default portfolio
+export default Portfolio

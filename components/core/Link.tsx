@@ -17,7 +17,7 @@ export const Link: React.FC<LinkProps> = ({
 	const isActive = exact ? pathname === href : pathname.startsWith(href);
 	
 	return (
-		<NextLink href={href} passHref>
+		<NextLink href={href} passHref scroll={false}>
 			<StyledLink 
 				{...props} 
 				{...isActive?{'aria-current': 'page'}:null} 

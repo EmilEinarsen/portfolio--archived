@@ -1,10 +1,10 @@
-import { Box, Flex, VStack } from '@chakra-ui/react'
+import { Box, fadeConfig, Flex, VStack } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 import { Nav } from "layout/Nav/Nav"
 import { Link } from 'components/core/Link'
 import { SwedishFlagIcon } from 'components/icons'
 import { Text } from "components/core/Text"
-import React from 'react'
 
 const Layout: React.FC = ({ children }) =>
 	<div className="wrapper">
@@ -16,15 +16,15 @@ const Layout: React.FC = ({ children }) =>
 					</div>
 				</Box>
 			</header>
-			<main className="main" id="main">
+			<motion.main className="main" id="main">
 				<div className="main__container">
 					{children}
 				</div>
-			</main>
+			</motion.main>
 			<footer className="footer" id="footer">
 				<Box as="p" d="inline-flex" alignItems="end" my="1rem">
 					<Text.Caption fontSize=".75rem" as="span">Proudly made in</Text.Caption>
-					<Box as="span" fontSize={0}>🇸🇪</Box><SwedishFlagIcon mx=".5rem" fontSize="1rem" />
+					<Box as="span" fontSize={0}>🇸🇪</Box><SwedishFlagIcon mx=".5rem" fontSize="1rem" aria-hidden />
 				</Box>
 				<VStack className="footer__container">
 					<Flex justify="space-between" flexWrap="wrap" gridGap="1rem" w="100%">

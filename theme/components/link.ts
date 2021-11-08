@@ -1,5 +1,3 @@
-import { StyleConfig } from "theme/theme"
-
 const link: StyleConfig = {
 	variants: {
 		inline: {

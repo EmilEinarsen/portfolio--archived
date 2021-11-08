@@ -1,11 +1,12 @@
-import React from 'react'
 
-const Projects = () => {
-	return (
-		<>
-			
-		</>
-	)
+const meta = {
+	title: '',
+	description: '',
 }
+
+const Projects: Page = () => 
+	<>
+		projects
+	</>
 
 export default Projects
