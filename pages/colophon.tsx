@@ -41,11 +41,11 @@ const colophon: Page = () =>
 					<Link variant="inline" href={TypescriptIconMeta.url}>Typescript</Link>, for its type hints and development guidance.
 				</ListItem>
 			</List>
-			{/* <Text>
-				Information about this websites purpose and development process can be found in its project <Link variant="inline" href="/projects/portfolio">article</Link>.
-			</Text> */}
 			<Text>
-				For more technical details take a look at the <Link variant="inline" href={process.env.NEXT_PUBLIC_SOURCE}>open-source code</Link>.
+				Information about this websites purpose and development process can be found in its project <Link variant="inline" href="/projects/portfolio">article</Link>.
+			</Text>
+			<Text>
+				For more technical details, that for whatever reason were not conveyed, take a look at the <Link variant="inline" href={process.env.NEXT_PUBLIC_SOURCE}>open-source code</Link>.
 			</Text>
 		</article>
 	</>
