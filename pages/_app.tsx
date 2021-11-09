@@ -1,6 +1,6 @@
+import React from 'react'
 import Head from 'next/head'
-import { ChakraProvider, fadeConfig } from '@chakra-ui/react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { ChakraProvider } from '@chakra-ui/react'
 
 import Layout from 'layout/Layout'
 import { useMount } from 'hooks/useMount'
@@ -8,9 +8,7 @@ import theme from 'theme'
 
 import 'styles/globals.scss'
 
-const MyApp = ({ Component, pageProps, router  }: AppPropsWithMeta) => {
-	const url = process.env.NEXT_PUBLIC_HOST+router.route
-
+const MyApp = ({ Component, pageProps, router }: AppPropsWithMeta) => {
 	useMount(() => {
 		if(!window) return
 		document.documentElement.style.setProperty('--vh', (window.innerHeight / 100)+'px')
@@ -24,18 +22,9 @@ const MyApp = ({ Component, pageProps, router  }: AppPropsWithMeta) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<ChakraProvider theme={theme}>
-				<Layout>
-					<AnimatePresence
-						exitBeforeEnter
-						initial={false}
-						onExitComplete={() => window.scrollTo(0,0)}
-					>
-						<motion.div {...fadeConfig} key={url}>
-							<Component {...pageProps}/*  canonical={url} */ />
-						</motion.div>
-					</AnimatePresence>
+				<Layout childKey={router.route}>
+					<Component {...pageProps} key={router.route} />
 				</Layout>
-				
 			</ChakraProvider>
 		</>
 	)

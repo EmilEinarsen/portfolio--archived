@@ -6,8 +6,6 @@ import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { Heading } from 'components/core/Heading'
 import { Text } from 'components/core/Text'
 
-import styles from 'styles/modules/About.module.scss'
-
 const meta = {
 	title: '',
 	description: ''
@@ -22,7 +20,7 @@ const Home: Page = () =>
 		</Head>
 		<Box as="article" className="about">
 			<Heading.H1
-				className={styles.about__headline}
+				className="about__headline"
 				mb="5rem" 
 				whiteSpace="pre-wrap"
 			>
@@ -31,7 +29,7 @@ const Home: Page = () =>
 			</Heading.H1>
 
 			<Text>
-				<span className={styles.profile}>
+				<span className="profile">
 					<Image 
 						src="/emil-einarsen.jfif" 
 						width={128} 

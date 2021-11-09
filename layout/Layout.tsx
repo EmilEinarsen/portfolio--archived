@@ -1,12 +1,12 @@
-import { Box, fadeConfig, Flex, VStack } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { Box, Flex, VStack } from '@chakra-ui/react'
 
 import { Nav } from "layout/Nav/Nav"
 import { Link } from 'components/core/Link'
 import { SwedishFlagIcon } from 'components/icons'
 import { Text } from "components/core/Text"
+import { TransitionLayout } from 'layout/TransitionLayout'
 
-const Layout: React.FC = ({ children }) =>
+const Layout: React.FC<{ childKey: string }> = ({ children, childKey }) =>
 	<div className="wrapper">
 		<div className="page">
 			<header className="header" id="header">
@@ -16,11 +16,11 @@ const Layout: React.FC = ({ children }) =>
 					</div>
 				</Box>
 			</header>
-			<motion.main className="main" id="main">
-				<div className="main__container">
+			<main className="main" id="main">
+				<TransitionLayout className="main__container" childKey={childKey}>
 					{children}
-				</div>
-			</motion.main>
+				</TransitionLayout>
+			</main>
 			<footer className="footer" id="footer">
 				<Box as="p" d="inline-flex" alignItems="end" my="1rem">
 					<Text.Caption fontSize=".75rem" as="span">Proudly made in</Text.Caption>
@@ -31,7 +31,7 @@ const Layout: React.FC = ({ children }) =>
 						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_SOURCE}>Source</Link></Box>
 						<Box flex="1"><Link href="/colophon">Colophon</Link></Box>
 						<Box flex="2" d={{ base: 'none', sm: 'unset' }} />
-						<Box flex="1"><Link href="/contact">Contact</Link></Box>
+						{/* <Box flex="1"><Link href="/contact">Contact</Link></Box> */}
 						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_GITHUB}>Github</Link></Box>
 						<Box flex="1"><Link href={process.env.NEXT_PUBLIC_LINKEDIN}>Linkedin</Link></Box>
 					</Flex>

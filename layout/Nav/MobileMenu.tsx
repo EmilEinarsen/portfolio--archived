@@ -66,7 +66,7 @@ const MobileMenu = () => {
 								id="mobileMenu"
 							>
 								<Item as={props => <Link {...props} href="/" exact>Home</Link>} isDrawer onClick={onClose} />
-								<Item as={props => <Link {...props} href="/projects" exact>Projects</Link>} isDrawer onClick={onClose} />
+								{/* <Item as={props => <Link {...props} href="/projects" exact>Projects</Link>} isDrawer onClick={onClose} /> */}
 								<Item as={props => <Link {...props} href="/about" exact>About</Link>} isDrawer onClick={onClose} />
 								<Item as={props => <Link {...props} href="/contact" exact>Contact</Link>} isDrawer onClick={onClose} />
 							</VStack>

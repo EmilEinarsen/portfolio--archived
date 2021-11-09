@@ -1,16 +1,4 @@
-import Image from 'next/image'
-import { UnorderedList, ListItem, Flex, Box } from '@chakra-ui/layout'
-
-import { Text } from 'components/core/Text'
-
-const meta = {
-	title: '',
-	description: '',
-}
-
-const Portfolio: Page = () =>
-	<>
-		<Text>
+<Text>
 			The goal was to build for <b>high performance while maintaining a great developer experience.</b>. 
 		</Text>
 		<Text>
@@ -54,6 +42,3 @@ const Portfolio: Page = () =>
 				<Text></Text>
 			</Box>
 		</Flex>
-	</>
-
-export default Portfolio

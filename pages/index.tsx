@@ -10,6 +10,7 @@ import { KnowledgeSection } from 'components/app/KnowledgeSection'
 import { ArrowForwardIcon } from 'components/icons/ArrowForwardIcon'
 import { Text } from 'components/core/Text'
 import { withMeta } from '../utils/withMeta'
+import { LinkedinIcon } from 'components/icons'
 
 const Home = withMeta<WithRouterProps>({
 	title: 'Emil Einarsen · Emil Einarsen',
@@ -38,8 +39,11 @@ const Home = withMeta<WithRouterProps>({
 					<Button 
 						variant="outline" 
 						size="lg"
-						onClick={() => router.push('/contact')}
+						/* onClick={() => router.push('/contact')} */
+						onClick={() => router.push(process.env.NEXT_PUBLIC_LINKEDIN??'')}
+						rightIcon={<LinkedinIcon />}
 					>
+						{/* Get in touch! */}
 						Get in touch!
 					</Button>
 					<Button 

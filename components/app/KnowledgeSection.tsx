@@ -22,7 +22,7 @@ export const KnowledgeSection = ({ showColors, as }: { showColors?: boolean, as?
 			</VStack>
 		}
 		<VStack>
-			<Text variant="caption" as={as}>Languages</Text>
+			<Text variant="caption" as={as} mb="1rem">Languages</Text>
 			<Wrap justify="center" spacing="1.5rem">
 				<Item name="HTML" showColors={showColors} />
 				<Item name="Javascript" showColors={showColors} />
@@ -34,7 +34,7 @@ export const KnowledgeSection = ({ showColors, as }: { showColors?: boolean, as?
 			</Wrap>
 		</VStack>
 		<VStack>
-			<Text variant="caption" as={as}>Frameworks</Text>
+			<Text variant="caption" as={as} mb="1rem">Frameworks</Text>
 			<Wrap justify="center" spacing="1.5rem">
 				<Item name="React" showColors={showColors} />
 				<Item name="Nextjs" showColors={showColors} />
@@ -43,7 +43,7 @@ export const KnowledgeSection = ({ showColors, as }: { showColors?: boolean, as?
 			</Wrap>
 		</VStack>
 		<VStack>
-			<Text variant="caption" as={as}>Ui-frameworks</Text>
+			<Text variant="caption" as={as} mb="1rem">Ui-frameworks</Text>
 			<Wrap justify="center" spacing="1.5rem">
 				<Item name="MUI" showColors={showColors} />
 				<Item name="ChakraUI" showColors={showColors} />
