@@ -30,9 +30,8 @@ export const Menu = () =>
 		<Box as="nav" className="nav" aria-label="Main">
 			<List className="nav__list" orientation="horizontal" alignItems="center">
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/" exact>Home</Link>} />
-				{/* <Item className="d-not-mobile" as={props => <Link {...props} href="/projects" exact>Projects</Link>} /> */}
+				<Item className="d-not-mobile" as={props => <Link {...props} href="/projects" exact>Projects</Link>} />
 				<Item className="d-not-mobile" as={props => <Link {...props} href="/about" exact>About</Link>} />
-				{/* <Item className="d-not-mobile" as={props => <Link {...props} href="/contact" exact>Contact</Link>} /> */}
 				<Item as={props => <Link  {...props} href={process.env.NEXT_PUBLIC_GITHUB} isExternal><GithubIcon fontSize="2xl" /></Link>} />
 				<Item as={props => <Link {...props} href={process.env.NEXT_PUBLIC_LINKEDIN} isExternal><LinkedinIcon fontSize="2xl" /></Link>} />
 				<IconButton

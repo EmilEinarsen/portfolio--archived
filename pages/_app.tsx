@@ -1,20 +1,24 @@
 import React from 'react'
 import Head from 'next/head'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useEventListenerMap } from '@chakra-ui/react'
 
 import Layout from 'layout/Layout'
 import { useMount } from 'hooks/useMount'
 import theme from 'theme'
 
 import 'styles/globals.scss'
+import { setActualCSSVh } from 'utils/utils'
 
 const MyApp = ({ Component, pageProps, router }: AppPropsWithMeta) => {
+	const control = useEventListenerMap()
 	useMount(() => {
 		if(!window) return
-		document.documentElement.style.setProperty('--vh', (window.innerHeight / 100)+'px')
 		console.log('Hello world')
 		console.log(`Here's the source code friend!\n${process.env.NEXT_PUBLIC_SOURCE}\n\nHope you find what you're looking for 🔍`)
+		control.add(window, 'resize', setActualCSSVh);
+		() => control.remove(window, 'resize', setActualCSSVh)
 	})
+
 	
   return (
 		<>

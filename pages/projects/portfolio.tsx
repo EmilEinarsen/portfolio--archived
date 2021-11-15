@@ -1,5 +1,12 @@
-<Text>
-			The goal was to build for <b>high performance while maintaining a great developer experience.</b>. 
+import React from 'react'
+import Image from 'next/image'
+import { Text } from 'components/core/Text'
+import { Box, Flex, ListItem, UnorderedList } from '@chakra-ui/layout'
+
+const portfolio = () =>
+	<article>
+		<Text>
+			The goal was to build for <b>high performance while maintaining a great developer experience.</b> 
 		</Text>
 		<Text>
 			For this websites intents and purposes, these metrics respectively is defined by:
@@ -42,3 +49,6 @@
 				<Text></Text>
 			</Box>
 		</Flex>
+	</article>
+
+export default portfolio
