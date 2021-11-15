@@ -13,8 +13,8 @@ export const KnowledgeSection = ({ showColors, as }: { showColors?: boolean, as?
 			// Color gradient
 			<VStack aria-hidden w="100%" maxW={300}>
 				<Flex justify="space-between" w="100%">
-					<Text.Naked>Familiar</Text.Naked>
-					<Text.Naked>Expert</Text.Naked>
+					<Text.Naked>Basic</Text.Naked>
+					<Text.Naked>Experienced</Text.Naked>
 				</Flex>
 				<Flex h=".5rem" w="100%">
 					{Object.entries(gradientRange).map(([k,v]) => <Box flex="1" key={k} bg={v} />)}
