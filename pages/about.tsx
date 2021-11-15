@@ -56,8 +56,8 @@ const Home: Page = () =>
 				I believe and embrace my favourite software quote:
 			</Text>
 			<Text.Blockquote className="quote quote--favorite">
-				“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
-				<Text as="cite">~ Martin Fowler</Text>
+				“Buggy code with perfect grammar reveals its bugs faster than perfect code with bad grammar revealing its functionality.”
+				<Text as="cite">~ Unknown</Text>
 			</Text.Blockquote>
 			<Text>
 				In my experience, code that does well also reads well. 
