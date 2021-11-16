@@ -20,6 +20,11 @@ import { HamburgerIcon } from './HamburgerIcon'
 import { LogoIcon } from './LogoIcon'
 import { SwedishFlagIcon } from './flags/SwedishFlagIcon'
 import { ExternalLinkIcon } from './ExternalLinkIcon'
+
+/*
+	Qol to easily import all icons
+	example usecase: dev-showcase
+*/
 export const Icon = {
 	Bootstrap: BootstrapIcon,
 	ChakraUI: ChakraUIIcon,
@@ -43,6 +48,10 @@ export const Icon = {
 	SwedishFlag: SwedishFlagIcon,
 	ExternalLink: ExternalLinkIcon,
 }
+
+/*
+	All icons go here
+*/
 export {
 	BootstrapIcon,
 	ChakraUIIcon,
@@ -67,6 +76,11 @@ export {
 	SwedishFlagIcon,
 	ExternalLinkIcon,
 }
+
+/*
+	Qol to easily import all icons meta
+	example usecase: dev-showcase
+*/
 export const Meta = {
 	Bootstrap: BootstrapIconMeta,
 	ChakraUI: ChakraUIIconMeta,
@@ -85,6 +99,10 @@ export const Meta = {
 	Svelte: SvelteIconMeta,
 	Typescript: TypescriptIconMeta,
 }
+
+/*
+	All meta goes here
+*/
 export {
 	BootstrapIconMeta,
 	ChakraUIIconMeta,
