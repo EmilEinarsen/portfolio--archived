@@ -17,8 +17,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": false,
+
+		// Relative paths
     "baseUrl": ".",
-    "incremental": false
   },
   "include": [
     "next-env.d.ts",
