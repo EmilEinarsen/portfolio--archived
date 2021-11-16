@@ -1,58 +1,67 @@
-import { useMount } from 'hooks/useMount';
-import { useState, useEffect, CSSProperties } from 'react';
+import { useState, useEffect, CSSProperties, useMemo, useCallback } from 'react'
 
-interface TransitionLayoutProps {
+import { useMount } from 'hooks/useMount'
+
+export interface TransitionLayoutProps {
+	children?: React.ReactNode
 	childKey: string
 	type?: CSSProperties['transitionTimingFunction']
 	duration?: CSSProperties['transitionDuration']
-	className?: string
-	initial?: boolean
-}
-
-export const TransitionLayout: React.FC<TransitionLayoutProps> = ({ 
-	children, 
-	className, 
-	childKey,
-	type,
-	duration,
-	initial,
-}) => {
-	const transitionProps = { transitionTimingFunction: type, transitionDuration: duration }
-  const [display, setDisplay] = useState({childKey,children});
-  const [transitionStage, setTransitionStage] = useState(!initial ? 'fadeIn' : 'fadeOut');
-
-	useMount(() => {
-		initial && setTransitionStage('fadeIn')
-	})
-
-  useEffect(() => {
-    if (childKey !== display.childKey) setTransitionStage('fadeOut');
-  }, [children, setDisplay, display, childKey]);
-
-  return (
-		<div
-			onTransitionEnd={() => {
-				if (transitionStage === 'fadeOut') {
-					setDisplay({childKey,children});
-					setTransitionStage('fadeIn');
-					window.scrollTo(0,0)
-				}
-			}}
-			style={transitionStage === 'fadeIn' ? { 
-				...transitionProps,
-				opacity: 1,
-			} : { 
-				...transitionProps,
-				opacity: 0,
-			}}
-			className={className}
-		>
-			{display.children}
-		</div>
-  );
+	withInitial?: boolean
+	animate?: CSSProperties
+	exit?: CSSProperties
 }
 
 TransitionLayout.defaultProps = {
 	type: 'ease',
 	duration: '.2s',
+	animate: { opacity: 1 },
+	exit: { opacity: 0 },
+}
+
+/* 
+	Built to be used for transitioning webpages 
+*/
+export function TransitionLayout({ 
+	children: nextChildren, 
+	childKey: nextChildKey,
+	type: transitionTimingFunction,
+	duration: transitionDuration,
+	withInitial,
+	animate,
+	exit,
+	...props
+}: TransitionLayoutProps) {
+	const { show, hide } = useMemo(() => ({
+		show: { ...animate, transitionTimingFunction, transitionDuration },
+		hide: { ...exit, transitionTimingFunction, transitionDuration },
+	}), [animate, exit, transitionDuration, transitionTimingFunction])
+
+  const [current, setCurrent] = useState({ childKey: nextChildKey, children: nextChildren })
+  const [stage, setStage] = useState(!withInitial ? 'show' : 'hide')
+
+	useMount(() => {
+		withInitial && setStage('show')
+	})
+
+  useEffect(() => {
+    nextChildKey !== current.childKey && setStage('hide');
+  }, [current, nextChildKey])
+
+	const hotSwapChild = useCallback(() => {
+		if(stage === 'show') return
+		setCurrent({ childKey: nextChildKey, children: nextChildren })
+		setStage('show')
+		window.scrollTo(0,0)
+	}, [nextChildKey, nextChildren, stage])
+
+  return (
+		<div
+			onTransitionEnd={hotSwapChild}
+			style={stage === 'show' ? show : hide}
+			{...props}
+		>
+			{current.children}
+		</div>
+  )
 }
