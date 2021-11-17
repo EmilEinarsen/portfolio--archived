@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps, router }: AppPropsWithMeta) => {
 			</Head>
 			<ChakraProvider theme={theme}>
 				<Layout childKey={router.route}>
-					<Component {...pageProps} key={router.route} />
+					<Component {...pageProps} />
 				</Layout>
 			</ChakraProvider>
 		</>
