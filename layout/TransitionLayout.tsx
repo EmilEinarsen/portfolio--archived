@@ -1,15 +1,23 @@
-import { useState, useEffect, CSSProperties, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 
 import { useMount } from 'hooks/useMount'
 
-export interface TransitionLayoutProps {
+export interface ComponentProps {
+	onTransitionEnd?: () => void
+	className?: string
+	id?: string
+	style?: React.CSSProperties
+}
+
+export interface TransitionLayoutProps extends ComponentProps {
 	children?: React.ReactNode
 	childKey: string
-	type?: CSSProperties['transitionTimingFunction']
-	duration?: CSSProperties['transitionDuration']
+	type?: React.CSSProperties['transitionTimingFunction']
+	duration?: React.CSSProperties['transitionDuration']
 	withInitial?: boolean
-	animate?: CSSProperties
-	exit?: CSSProperties
+	animate?: React.CSSProperties
+	exit?: React.CSSProperties
+	as?: React.ComponentType<ComponentProps> | string
 }
 
 TransitionLayout.defaultProps = {
@@ -30,6 +38,7 @@ export function TransitionLayout({
 	withInitial,
 	animate,
 	exit,
+	as: Component = 'div',
 	...props
 }: TransitionLayoutProps) {
 	const { show, hide } = useMemo(() => ({
@@ -56,12 +65,15 @@ export function TransitionLayout({
 	}, [nextChildKey, nextChildren, stage])
 
   return (
-		<div
-			onTransitionEnd={hotSwapChild}
-			style={stage === 'show' ? show : hide}
+		<Component
 			{...props}
+			onTransitionEnd={() => {
+				hotSwapChild()
+				props.onTransitionEnd?.()
+			}}
+			style={{ ...props.style, ...stage === 'show' ? show : hide }}
 		>
 			{current.children}
-		</div>
+		</Component>
   )
 }
