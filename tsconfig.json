@@ -19,7 +19,7 @@
     "jsx": "preserve",
     "incremental": false,
 
-		// Relative paths
+    // "Unlocks" relative paths
     "baseUrl": ".",
   },
   "include": [
