@@ -23,7 +23,7 @@ export interface TransitionLayoutProps extends ComponentProps {
 
 TransitionLayout.defaultProps = {
 	type: 'ease',
-	duration: '.2s',
+	duration: '.15s',
 	animate: { opacity: 1 },
 	exit: { opacity: 0 },
 }
