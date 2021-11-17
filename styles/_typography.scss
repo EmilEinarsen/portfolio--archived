@@ -23,7 +23,7 @@ blockquote.quote {
     height: $quote-icon-size * 2;
     width: $quote-border-width;
     margin-top: -$quote-icon-size;
-		background: $white;
+		background: var(--colors-white);
 	}
 
   &:after {
