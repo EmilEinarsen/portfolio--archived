@@ -1,11 +1,14 @@
-import { usePrefersReducedMotion } from "@chakra-ui/react"
+import React from "react"
 
-export const PageTransition: React.FC = ({ children }) => {
+import { usePrefersReducedMotion } from "@chakra-ui/react"
+import { TransitionLayout, TransitionLayoutProps } from "./TransitionLayout"
+
+export const Page: React.FC<TransitionLayoutProps> = ({ children, ...props }) => {
 	const shouldReduceMotion = usePrefersReducedMotion()
 	
 	return !shouldReduceMotion ? (
-		<div>
+		<TransitionLayout {...props}>
 			{children}
-		</div>
+		</TransitionLayout>
 	) : <>{children}</>
 }

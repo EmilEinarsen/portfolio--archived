@@ -4,7 +4,7 @@ import { Nav } from "layout/Nav/Nav"
 import { Link } from 'components/core/Link'
 import { SwedishFlagIcon } from 'components/icons'
 import { Text } from "components/core/Text"
-import { TransitionLayout } from 'layout/TransitionLayout'
+import { Page } from 'layout/Page'
 
 const Layout: React.FC<{ childKey: string }> = ({ children, childKey }) =>
 	<div className="wrapper">
@@ -17,9 +17,9 @@ const Layout: React.FC<{ childKey: string }> = ({ children, childKey }) =>
 				</Box>
 			</header>
 			<main className="main" id="main">
-				<TransitionLayout className="main__container" childKey={childKey}>
+				<Page className="main__container" childKey={childKey}>
 					{children}
-				</TransitionLayout>
+				</Page>
 			</main>
 			<footer className="footer" id="footer">
 				<Box as="p" d="inline-flex" alignItems="end" my="1rem">
