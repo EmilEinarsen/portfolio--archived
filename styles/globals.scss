@@ -11,7 +11,13 @@ html {
 	overflow-x: hidden;
 }
 
-html.noscroll {
+/* 
+	Used in useDisableScroll
+	example usecase:
+
+	Disable body scroll when mobile menu is open
+*/
+html.no-scroll {
 	overflow-y: hidden;
 	.header {
 		margin-right: 17px
@@ -24,16 +30,12 @@ body.dots {
 	background-size: 50px 50px;
 }
 
-@-ms-viewport {
-  width: device-width;
-}
-
+// d-[""]-mobile is used to hide elements relative to mobile without JS
 .d-not-mobile {
 	@media (max-width: 48em) {
 		display: none !important;
 	}
 }
-
 .d-only-mobile {
 	@media (min-width: 48em) {
 		display: none !important;
