@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 
 import { useMount } from 'hooks/useMount'
+import { useBoolean } from '@chakra-ui/hooks'
 
 export interface ComponentProps {
 	onTransitionEnd?: () => void
@@ -47,22 +48,22 @@ export function TransitionLayout({
 	}), [animate, exit, transitionDuration, transitionTimingFunction])
 
   const [current, setCurrent] = useState({ childKey: nextChildKey, children: nextChildren })
-  const [stage, setStage] = useState(!withInitial ? 'show' : 'hide')
+	const [ isShow, { toggle: toggleStage } ] = useBoolean(!withInitial)
 
 	useMount(() => {
-		withInitial && setStage('show')
+		withInitial && toggleStage()
 	})
 
   useEffect(() => {
-    nextChildKey !== current.childKey && setStage('hide');
-  }, [current, nextChildKey])
+    nextChildKey !== current.childKey && toggleStage()
+  }, [current, nextChildKey, toggleStage])
 
 	const hotSwapChild = useCallback(() => {
-		if(stage === 'show') return
+		if(isShow) return
 		setCurrent({ childKey: nextChildKey, children: nextChildren })
-		setStage('show')
+		toggleStage()
 		window.scrollTo(0,0)
-	}, [nextChildKey, nextChildren, stage])
+	}, [isShow, nextChildKey, nextChildren, toggleStage])
 
   return (
 		<Component
@@ -71,7 +72,7 @@ export function TransitionLayout({
 				hotSwapChild()
 				props.onTransitionEnd?.()
 			}}
-			style={{ ...props.style, ...stage === 'show' ? show : hide }}
+			style={{ ...props.style, ...isShow ? show : hide }}
 		>
 			{current.children}
 		</Component>
